@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans serif;
+    line-height: 1.5;
+    color: #ffffff;
+    font-size: 20px;
+  }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 100%;
+    background-image: url(../images/menu.jpg);
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+.logo a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 0 10px;
+    color: #ffffff;
+}
+header img{
+    height: 60px;
+}
+header .menu ul{
+    display: flex;
+}
+.menu{
+    padding-right: 150px;
+}
+.menu ul li{
+    list-style: none;
+    padding: 0 10px;
+    -webkit-transition: all 1s ease-out;
+}
+.menu ul li:hover{
+    -webkit-transform: scale(1.1);
+}
+.menu li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    
+}
+#first{
+    width: 100%;
+    height: 100vh;
+    overflow:   hidden;
+}
+.backgrounds{
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    height: 100vh;
+    -webkit-transition: all 1s ease-out;
+}
+.backgrounds:hover {
+    -webkit-transform: scale(1.1);
+}
+h2, h3 {
+    text-align: center;
+    padding-top: 25px;
+}
+#story, .blok{
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+}
+/* #story{
+    padding-top: 55px;
+	margin-top: -55px;
+} */
+
+.blok{
+    position:relative;
+}
+.bg{
+    background-color: #233529;
+    /* background-image: url(images/bg.jpg);*/
+    background-size: cover;
+}
+
+.content{
+    display: flex;
+}
+.content img{
+    width: 300px;
+}
+.foto img{
+    -webkit-transition: all 1s ease-out;
+}
+.foto img:hover {
+    /* display: block; */
+    -webkit-transform: scale(1.1);
+}
+.text{
+    padding: 20px 0 20px 30px;
+}
+.download{
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.download a{
+    text-decoration: none;
+    color: #ffffff; 
+}
+.box{
+    /* position: relative; */
+    border: chartreuse;
+}
+.box-inside{
+    width: 400px;
+    float: right;
+    margin: 0 0 15px 15px;
+    padding: 0 15px 15px 15px;
+    border: 2px solid #ffffff;
+}
+.box-inside span{
+    font-weight: bold;
+    color: #50fc00;
+}
+.box-inside h3{
+    padding-top: 5px;
+}
+.download_link{
+    transition: all 1s ease-out;
+}
+.download_link:hover{
+    transform: scale(1.1);
+}
+.home{
+    /* background-image: url(/images/home.jpg); */
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.home:hover{
+
+}
