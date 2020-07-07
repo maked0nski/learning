@@ -1,4 +1,4 @@
-console.log(' 1 - створити обєкт (не меньше 5ти властивостей) який описує собаку');
+// console.log(' 1 - створити обєкт (не меньше 5ти властивостей) який описує собаку');
 let dog ={
     dog_breed : 'Saint Bernard',
     country : 'Swiss',
@@ -11,7 +11,7 @@ let dog ={
 console.log(dog)
 
 
-console.log(' 2 - створити обєкт (не меньше 5ти властивостей) який описує людину');
+// console.log(' 2 - створити обєкт (не меньше 5ти властивостей) який описує людину');
 let human = {
     height : 180,
     weight : 80,
@@ -23,7 +23,7 @@ let human = {
 console.log(human)
 
 
-console.log(' 3 - створити обєкт (не меньше 5ти властивостей) який описує автомобіль');
+// console.log(' 3 - створити обєкт (не меньше 5ти властивостей) який описує автомобіль');
 let car = {
     brend : 'Volkswagen',
     model : 'Tiguan SEL',
@@ -35,7 +35,7 @@ let car = {
 console.log(car)
 
 
-console.log(' 4 - створити обєкт (не меньше 5ти властивостей) який описує квартиру');
+// console.log(' 4 - створити обєкт (не меньше 5ти властивостей) який описує квартиру');
 let apartment = {
     rooms : 3,
     area : 98,
@@ -47,7 +47,7 @@ let apartment = {
 console.log(apartment)
 
 
-console.log(' 5 - створити обєкт (не меньше 5ти властивостей) який описує книгу');
+// console.log(' 5 - створити обєкт (не меньше 5ти властивостей) який описує книгу');
 let book = {
     name : 'Купи собі той довбаний букет: та інші способи зібратися докупи від тієї, котрій вдалось',
     name_eng: 'Buy Yourself the F*cking Lilies: And Other Rituals To Fix Your Life, From Someone Who’s Been There',
@@ -60,7 +60,7 @@ let book = {
 console.log(book)
 
 
-console.log(' 6 - Створити масив з 5 собак та вивести його в консоль');
+// console.log(' 6 - Створити масив з 5 собак та вивести його в консоль');
 let dogs  = [
     dog,
     {
@@ -105,7 +105,7 @@ console.log(dogs)
 
 
 
-console.log(' 7 - Створити масив з 5 людей та вивести його в консоль');
+// console.log(' 7 - Створити масив з 5 людей та вивести його в консоль');
 let friends = [
     {
         name : 'Aleks',
@@ -152,7 +152,7 @@ console.log(friends);
 
 
 
-console.log(' 8 - Створити масив з 5 автомобілів та вивести його в консоль');
+// console.log(' 8 - Створити масив з 5 автомобілів та вивести його в консоль');
 let cars = [
     car,
     {
@@ -193,3 +193,87 @@ let cars = [
     }
 ];
 console.log(cars);
+
+
+// console.log("9 - створити об'єкт будинок (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом");
+let house = {
+    sity : 'Lviv',
+    price :22540,
+    material : {wall : 'brick',  roof : 'metal tile', floor : 'slab'},
+    additionally : ['internet', 'sewerage', 'water', 'electricity'],
+    area: 150
+};
+console.log(house);
+
+// console.log("10 - створити об'єкт водій (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом");
+let driver = {
+    name : 'Nikolay',
+    age : 37,
+    sex : 'male',
+    specifications : {experience : 12, violations : 2, marital_status : 'married'},
+    category : ['A1', 'A', 'B1', 'B', 'C1', 'c', 'BE', 'CE'],
+    salary: 1900
+};
+console.log(driver);
+
+// console.log("11 - створити об'єкт іграшку (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом");
+let toy = {
+    name : 'L.O.L Surprise!',
+    code : 178081317,
+    country : 'Chine',
+    package_size : {width : 13.4, height : 13.4, long : 14},
+    complete_set : ['packaging', 'figurine', 'accessories', 'instruction'],
+    warranty : 14,
+    price : 599
+};
+console.log(toy);
+
+// console.log("12 - створити об'єкт стіл (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом");
+let table = {
+    name : "Комп'ютерний стіл Aerocool ACD1-120 Black",
+    code : 207387913,
+    country : 'Chine',
+    package_size : {width : 1130 , height : 600, long : 750},
+    material : ['chipboard', 'Metal', 'Plastic'],
+    warranty : 12,
+    price : 4999
+};
+console.log(table);
+
+// console.log("13 - створити об'єкт сумка (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом");
+let bag = {
+    name : "Жіноча сумка Parfois 172501-GY",
+    code : 183141358,
+    color: 'Silver',
+    country : 'Irak',
+    package_size : {width : 33 , height : 28, long : 15},
+    material : ['100% поліуретан', '40% поліестер', 'Кожа молодого Дерьмонтина'],
+    warranty : 12,
+    for_whom: 'women',
+    price : 699,
+    discount :true
+};
+console.log(bag);
+
+// Дан массив:
+let users = [
+				{name: 'vasya', age: 31, status: false},
+				{name: 'petya', age: 30, status: true},
+				{name: 'kolya', age: 29, status: true},
+				{name: 'olya', age: 28, status: false},
+				{name: 'max', age: 30, status: true},
+				{name: 'anya', age: 31, status: false},
+				{name: 'oleg', age: 28, status: false},
+				{name: 'andrey', age: 29, status: true},
+				{name: 'masha', age: 30, status: true},
+				{name: 'olya', age: 31, status: false},
+				{name: 'max', age: 31, status: true}
+            ];
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль статус Андрія");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль статус Максима");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль ім'я передостаннього об'єкту");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль ім'я третього об'єкта");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль вік Олега");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль вік Олі");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль вік + ім'я 5го об'єкта");
+// console.log("14 - звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консоль вік + сатус Анни");
