@@ -696,4 +696,4 @@ for (i of array60){
         sum_67 += Math.sqrt(i);
     }
 }
-console.log(sum_67)
+console.log(sum_67);
