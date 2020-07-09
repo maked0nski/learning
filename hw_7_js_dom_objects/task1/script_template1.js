@@ -8,5 +8,25 @@ document.getElementById('rules').innerText = `Первое правило Бой
                                             Пятое правило Бойцовского клуба: бойцы сражаются без обуви и голые по пояс.
                                             Шестое правило Бойцовского клуба: поединок продолжается столько, сколько потребуется.
                                             Седьмое правило Бойцовского клуба : если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.
-                                            Восьмое и последнее правило Бойцовского клуба : новичок обязан принять бой.`
+                                            Восьмое и последнее правило Бойцовского клуба : новичок обязан принять бой.`;
+//- змініть кожному елементу колір фону на червоний
+let tags = document.body.getElementsByTagName('*');
+for (let i of tags ){
+    i.style.backgroundColor = 'red'
+}
+//  змініть кожному елементу колір тексту на синій
+for (let i of tags ){
+    i.style.color = 'blue'
+}
+// - отримати весь список класів елемента з id=rules і вивести їх в console.log
+console.log(document.getElementById('rules').classList);
 
+// отримати всі елементи з класом fc_rules
+let class_fc_rules = document.getElementsByClassName('fc_rules');
+
+// - поміняти колір тексту у всіх елементів fc_rules на червоний
+for(i of class_fc_rules){
+    i.style.color = 'red';
+
+}
+console.log(class_fc_rules);
