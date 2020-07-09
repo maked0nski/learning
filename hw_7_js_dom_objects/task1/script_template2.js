@@ -1,7 +1,13 @@
 // Взяти файл template_2.html та працювати в ньому
 // - Напишіть код, який :
 // -- змінює колір тексту елемнту з ід main_header на будь-який інший
+let id_main_header = document.getElementById('main_header');
+id_main_header.style.color = 'green';
+
 // -- робить шириниу елементу ul 400 пікселів
+let tag_ul = document.getElementsByTagName('ul');
+tag_ul.style.
+
 // -- робить шириниу всіх елементів з класом linkList шириною 50%
 // -- отримує текст який зберігається в елементі з класом listElement2
 // -- отримує всі елементи li та змінює ім колір фону на сірий
