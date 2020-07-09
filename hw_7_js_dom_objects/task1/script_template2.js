@@ -6,7 +6,10 @@ id_main_header.style.color = 'green';
 
 // -- робить шириниу елементу ul 400 пікселів
 let tag_ul = document.getElementsByTagName('ul');
-tag_ul.style.
+for(i of tag_ul){
+    i.style.width = '400px';
+}
+
 
 // -- робить шириниу всіх елементів з класом linkList шириною 50%
 // -- отримує текст який зберігається в елементі з класом listElement2
