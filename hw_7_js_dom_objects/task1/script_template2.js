@@ -50,29 +50,31 @@ for (const i of tag_a1) {
 }
 
 // -- отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
-let input_color = prompt('Введи цвет');
-let class_sub_header = document.getElementsByClassName('sub-header');
-for (const i of class_sub_header) {
-    i.style.background = input_color;
-}
+// let input_color = prompt('Введи цвет');
+// let class_sub_header = document.getElementsByClassName('sub-header');
+// for (const i of class_sub_header) {
+//     i.style.background = input_color;
+// }
 // -- отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст 
 //    елемнту = content 2 segment . Колір отримати з prompt()
-let class_sub_header1 = document.getElementsByClassName('sub-header');
-let input_color1 = prompt('ще раз')
-for (const i of class_sub_header1) {
-    if (i.textContent === 'content 2 segment'){
-        i.style.color = input_color1;
-    }
-}
-
-// // -- отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
-// let class_sub_header2 = document.getElementsByClassName('sub-header');
-// let input_color2 = prompt('текст для линка')
-// for (const i of class_sub_header2) {
-//     if (i.textContent === 'content_1'){
-//         i.style.color = input_color2;
+// let class_sub_header1 = document.getElementsByClassName('sub-header');
+// let input_color1 = prompt('ще раз')
+// for (const i of class_sub_header1) {
+//     if (i.textContent === 'content 2 segment'){
+//         i.style.color = input_color1;
 //     }
 // }
 
-// -- отримати елементи p та змінити їм paddin на довільне значення
+// -- отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+let class_content_1 = document.getElementsByClassName('content_1');
+class_content_1[0].textContent = prompt('текст для линка')
+
+// -- отримати елементи p та змінити їм padding на довільне значення
+let tag_p = document.getElementsByTagName('p');
+for (const iterator of tag_p) {
+    iterator.style.padding = '120px';
+}
+
 // -- отримати елементи з класом text2 та змінити їм текст на довільне значення
+let class_text2 = document.getElementsByClassName('text2');
+class_text2[0].textContent = "osvbidbvbsdn ood dvo ssdvou sdoh vusd hvouhsdduvhosdj voij sdodv voso voosd voussdouovh osdj voj dsoiivj oisdj vvoij sdoivjoisdj jvoiijjsd ovi ";
