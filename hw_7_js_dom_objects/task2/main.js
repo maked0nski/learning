@@ -367,22 +367,22 @@ temp_arr = [object_car, cities, cars, cars1];
 function forIterator(array) {
   for (let index = 0; index < array.length; index++) {
     console.log(array[index]);
-  };
-};
+  }
+}
 
 function whileIterator(array) {
   let i = 0;
   while (i < array.length) {
     console.log(array[i]);
     i++;
-  };
-};
+  }
+}
 
 function forOfIterator(array) {
   for (const i of array) {
     console.log(i);
-  };
-};
+  }
+}
 
 console.log("_______________________");
 for (const i of temp_arr) {
@@ -471,23 +471,20 @@ let arrey_users = [
 ];
 
 for (const i of arrey_users) {
-    console.log(i);
-    console.log('Skills :');
-    console.log(i.skills);
-    
-};
-
+  console.log(i);
+  console.log("Skills :");
+  console.log(i.skills);
+}
 
 // - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом.
 // Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills всех пользователей в отедльный массив
-let users_skills = []
+let users_skills = [];
 for (const i of arrey_users) {
-    for (const k of i.skills) {
-        users_skills.push(k)
-    };
-};
+  for (const k of i.skills) {
+    users_skills.push(k);
+  }
+}
 console.log(users_skills);
-
 
 // - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
 let users = [
@@ -499,164 +496,371 @@ let users = [
 ];
 
 for (const i of users) {
-    console.log(i);
-    for (const k of i.skills) {
-        console.log(k);
-    };
-};
-
-
+  console.log(i);
+  for (const k of i.skills) {
+    console.log(k);
+  }
+}
 
 let users_new = [
-    {
-      name: "vasya",
-      age: 31,
-      status: false,
-      address: {
-        city: "Lviv",
-        country: "Ukraine",
-        street: "Shevchenko",
-        houseNumber: 1,
-      },
+  {
+    name: "vasya",
+    age: 31,
+    status: false,
+    address: {
+      city: "Lviv",
+      country: "Ukraine",
+      street: "Shevchenko",
+      houseNumber: 1,
     },
-    {
-      name: "petya",
-      age: 30,
-      status: true,
-      address: {
-        city: "New York",
-        country: "USA",
-        street: "East str",
-        houseNumber: 21,
-      },
+  },
+  {
+    name: "petya",
+    age: 30,
+    status: true,
+    address: {
+      city: "New York",
+      country: "USA",
+      street: "East str",
+      houseNumber: 21,
     },
-    {
-      name: "kolya",
-      age: 29,
-      status: true,
-      address: {
-        city: "Budapest",
-        country: "Hungary",
-        street: "Kuraku",
-        houseNumber: 78,
-      },
+  },
+  {
+    name: "kolya",
+    age: 29,
+    status: true,
+    address: {
+      city: "Budapest",
+      country: "Hungary",
+      street: "Kuraku",
+      houseNumber: 78,
     },
-    {
-      name: "olya",
-      age: 28,
-      status: false,
-      address: {
-        city: "Prague",
-        country: "Czech",
-        street: "Paster",
-        houseNumber: 56,
-      },
+  },
+  {
+    name: "olya",
+    age: 28,
+    status: false,
+    address: {
+      city: "Prague",
+      country: "Czech",
+      street: "Paster",
+      houseNumber: 56,
     },
-    {
-      name: "max",
-      age: 30,
-      status: true,
-      address: {
-        city: "Istanbul",
-        country: "Turkey",
-        street: "Mikar",
-        houseNumber: 39,
-      },
+  },
+  {
+    name: "max",
+    age: 30,
+    status: true,
+    address: {
+      city: "Istanbul",
+      country: "Turkey",
+      street: "Mikar",
+      houseNumber: 39,
     },
-    {
-      name: "anya",
-      age: 31,
-      status: false,
-      address: {
-        city: "Rio",
-        country: "Brasil",
-        street: "Ronaldi",
-        houseNumber: 5,
-      },
+  },
+  {
+    name: "anya",
+    age: 31,
+    status: false,
+    address: {
+      city: "Rio",
+      country: "Brasil",
+      street: "Ronaldi",
+      houseNumber: 5,
     },
-    {
-      name: "oleg",
-      age: 28,
-      status: false,
-      address: {
-        city: "Montreal",
-        country: "Canada",
-        street: "Acusto",
-        houseNumber: 90,
-      },
+  },
+  {
+    name: "oleg",
+    age: 28,
+    status: false,
+    address: {
+      city: "Montreal",
+      country: "Canada",
+      street: "Acusto",
+      houseNumber: 90,
     },
-    {
-      name: "andrey",
-      age: 29,
-      status: true,
-      address: {
-        city: "Quebeck",
-        country: "Canada",
-        street: "Binaro",
-        houseNumber: 33,
-      },
+  },
+  {
+    name: "andrey",
+    age: 29,
+    status: true,
+    address: {
+      city: "Quebeck",
+      country: "Canada",
+      street: "Binaro",
+      houseNumber: 33,
     },
-    {
-      name: "masha",
-      age: 30,
-      status: true,
-      address: {
-        city: "Moscow",
-        country: "Russia",
-        street: "Gogolia",
-        houseNumber: 1,
-      },
+  },
+  {
+    name: "masha",
+    age: 30,
+    status: true,
+    address: {
+      city: "Moscow",
+      country: "Russia",
+      street: "Gogolia",
+      houseNumber: 1,
     },
-    {
-      name: "olya",
-      age: 31,
-      status: false,
-      address: {
-        city: "Portland",
-        country: "USA",
-        street: "Forest str",
-        houseNumber: 4,
-      },
+  },
+  {
+    name: "olya",
+    age: 31,
+    status: false,
+    address: {
+      city: "Portland",
+      country: "USA",
+      street: "Forest str",
+      houseNumber: 4,
     },
-    {
-      name: "max",
-      age: 31,
-      status: true,
-      address: {
-        city: "Cairo",
-        country: "Egypt",
-        street: "Seashore",
-        houseNumber: 45,
-      },
+  },
+  {
+    name: "max",
+    age: 31,
+    status: true,
+    address: {
+      city: "Cairo",
+      country: "Egypt",
+      street: "Seashore",
+      houseNumber: 45,
     },
-  ];
-  
+  },
+];
+
 // - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
-console.log('_______________________________________________________________');
+console.log("_______________________________________________________________");
 
 let users_address = [];
 for (i of users_new) {
-    users_address = users_address.concat(i.address)
-};
+  users_address = users_address.concat(i.address);
+}
 console.log(users_address);
-
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement.
 // Всі данні в одному блоці.
 let div = document.createElement("div");
+document.body.append(div);
 for (const i of users_new) {
-    div.textContent += i.name + ' ';
-};
-console.log('___________________');
+  div.textContent += i.name + " ";
+}
+console.log("___________________");
 console.log(div);
-
-
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам (div>div*4)
-
+let main_div = document.createElement("div");
+document.body.append(main_div);
+for (const i of users_new) {
+  let div_user = document.createElement("div");
+  let div_name = document.createElement("div");
+  let div_age = document.createElement("div");
+  let div_status = document.createElement("div");
+  let div_address = document.createElement("div");
+  div_name.textContent = i.name;
+  div_age.textContent = i.age;
+  div_status.textContent = i.status;
+  div_address.textContent = JSON.stringify(i.address);
+  main_div.append(div_user);
+  div_user.append(div_name);
+  div_user.append(div_age);
+  div_user.append(div_status);
+  div_user.append(div_address);
+}
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
 
+let main_div_1 = document.createElement("div");
+document.body.append(main_div_1);
+for (const i of users_new) {
+  let div_user_1 = document.createElement("div");
+  let div_name_1 = document.createElement("div");
+  let div_age_1 = document.createElement("div");
+  let div_status_1 = document.createElement("div");
+  let div_address_1 = document.createElement("div");
+  let div_city = document.createElement("div");
+  let div_country = document.createElement("div");
+  let div_street = document.createElement("div");
+  let div_houseNumber = document.createElement("div");
+  div_name_1.textContent = i.name;
+  div_age_1.textContent = i.age;
+  div_status_1.textContent = i.status;
+  div_city.textContent = i.address.city;
+  div_country.textContent = i.address.country;
+  div_street.textContent = i.address.street;
+  div_houseNumber.textContent = i.address.houseNumber;
+  main_div_1.append(div_user_1);
+  div_user_1.append(div_name_1);
+  div_user_1.append(div_age_1);
+  div_user_1.append(div_status_1);
+  div_user_1.append(div_address_1);
+  div_address_1.append(div_city);
+  div_address_1.append(div_country);
+  div_address_1.append(div_street);
+  div_address_1.append(div_houseNumber);
+}
 
+// - Дано 2 масиви з рівною кількістю об'єктів.
+// Масиви:
+let usersWithId = [
+  { id: 1, name: "vasya", age: 31, status: false },
+  { id: 2, name: "petya", age: 30, status: true },
+  { id: 3, name: "kolya", age: 29, status: true },
+  { id: 4, name: "olya", age: 28, status: false },
+];
+let citiesWithId = [
+  { user_id: 3, country: "USA", city: "Portland" },
+  { user_id: 1, country: "Ukraine", city: "Ternopil" },
+  { user_id: 2, country: "Poland", city: "Krakow" },
+  { user_id: 4, country: "USA", city: "Miami" },
+];
+
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// Записати цей об'єкт в новий масив
+// Частковий приклад реультату:
+// let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
+let usersWithCities = [];
+for (let i = 0; i < usersWithId.length; i++) {
+  usersWithCities[i] = usersWithId[i];
+  for (let j = 0; j < citiesWithId.length; j++) {
+    if (usersWithId[i].id === citiesWithId[j].user_id) {
+      usersWithCities[i]["address"] = citiesWithId[j];
+    }
+  }
+}
+console.log(usersWithCities);
+
+// - створити розмітці блок з id, class та текстом в середені.
+let div_1 = document.createElement("div");
+div_1.id = "myId";
+div_1.classList.add("myClass");
+div_1.innerText = "та текстом в середені )";
+document.body.append(div_1);
+// document.body.
+// Зчитати окремо цей текст з селекторів по id , class та тегу
+console.log("___Зчитати окремо текст з селекторa по id____ ");
+let div_1_id = document.getElementById("myId").textContent;
+console.log(div_1_id);
+
+console.log("___Зчитати окремо текст з селекторa по class____ ");
+let div_1_Class = document.getElementsByClassName("myClass")[0].textContent;
+console.log(div_1_Class);
+
+console.log("___Зчитати окремо текст з селекторa по тегу____ ");
+let div_1_tag = document.getElementsByTagName("div");
+console.log(div_1_tag[div_1_tag.length - 1].textContent);
+console.log(div_1_tag);
+
+// - змінити цей текст використовуючи селектори id, class,  tag
+div_1_id = "змінити цей текст використовуючи селектори id";
+console.log(div_1_id);
+div_1_Class = "змінити цей текст використовуючи селектори class";
+console.log(div_1_Class);
+
+div_1_tag[div_1_tag.length - 1].textContent =
+  "змінити цей текст використовуючи селектори tag";
+console.log(div_1_tag[div_1_tag.length - 1].textContent);
+
+// - змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+document.getElementById("myId").style.width = "300px";
+document.getElementsByClassName("myClass")[0].style.height = "50px";
+
+// - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+// let table = document.createElement('table');
+// let td1 = document.createElement('td');
+// let td2 = document.createElement('td');
+// let td3 = document.createElement('td');
+
+// document.body.append(table);
+// table.appendChild(td1);
+// table.appendChild(td2);
+// table.appendChild(td3);
+
+function createTable(tag, col, row) {
+  let table = document.createElement("table");
+  for (let r = 0; r < row; r++) {
+    let tr = document.createElement("tr");
+    table.append(tr);
+    for (let d = 0; d < col; d++) {
+      let td = document.createElement("td");
+      tr.append(td);
+    }
+  }
+  tag.appendChild(table);
+}
+let table1 = document.createElement("div");
+table1.classList.add("class_table");
+document.body.append(table1);
+
+createTable(table1, 3, 1);
+
+// - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+let table2 = document.createElement("div");
+table2.classList.add("class_table");
+document.body.append(table2);
+
+createTable(table2, 3, 10);
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+let table3 = document.createElement("div");
+table3.classList.add("class_table");
+document.body.append(table3);
+
+createTable(table3, 5, 10);
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+
+// --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
+//  - знайти всі елементі, які мають class
+//  - знайти всі параграфи ,та змінити текст на hello oktenweb!
+//  - знайти всі div та змінити ім колір на червоний
+
+// ============
+// ====class===
+// ============
+
+// - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
+// створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
+// Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
+
+// -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
+// При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
+// Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
+
+let rules = [
+  {
+    title: "Первое правило Бойцовского клуба.",
+    body: "Никому не рассказывать о Бойцовском клубе.",
+  },
+  {
+    title: "Второе правило Бойцовского клуба.",
+    body: "Никогда никому не рассказывать о Бойцовском клубе.",
+  },
+  {
+    title: "Третье правило Бойцовского клуба.",
+    body: "В схватке участвуют только двое.",
+  },
+  {
+    title: "Четвертое правило Бойцовского клуба.",
+    body: "Не более одного поединка за один раз.",
+  },
+  {
+    title: "Пятое правило Бойцовского клуба.",
+    body: "Бойцы сражаются без обуви и голые по пояс.",
+  },
+  {
+    title: "Шестое правило Бойцовского клуба.",
+    body: "Поединок продолжается столько, сколько потребуется.",
+  },
+  {
+    title: "Седьмое правило Бойцовского клуба.",
+    body:
+      "Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.",
+  },
+  {
+    title: "Восьмое и последнее правило Бойцовского клуба.",
+    body: "Новичок обязан принять бой.",
+  },
+];
+
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+// ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
