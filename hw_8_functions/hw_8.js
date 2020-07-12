@@ -1,5 +1,6 @@
 // - створити функцію яка виводить масив
 function printArray(arr) {
+    document.write(arr + '</br>');
     console.log(arr)
 }
 printArray([1,5,2,8,4,6,'jh','hfdsg',44])
@@ -65,19 +66,67 @@ function minArgument() {
             a_max = arguments[i]
         }  
     }
-    document.write(a_max);
+    document.write('створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше' + '</br>')
+    document.write(a_max  + '</br>');
     return a_min;
 };
+
 console.log(minArgument(-1,5,8,54,958,12,2,8,9,-165,3,-5,55,-99));
 
+
 // створити функцію яка виводить масив
-let test_array = [-1,5,8,54,958,12,2,8,9,-165,3,-5,55,-99]
+let test_array = [-1,5,8,54,958,12,2,8,99,-165,3,-5,55,-99]
+document.write('створити функцію яка виводить масив' + '</br>')
 printArray(test_array);
 
 
 // - створити функцію яка повертає найбільше число з масиву
-
 function maxArrayItem(arr) {
-    
+    let a = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (a < arr[i]) {
+            a=arr[i];
+        }
+    }
+    return a
 }
+console.log('створити функцію яка повертає найбільше число з масиву');
 console.log(maxArrayItem(test_array));
+
+
+// створити функцію яка повертає найменьше число з масиву
+function minArrayItem(arr) {
+    let a = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (a > arr[i]) {
+            a=arr[i];
+        }
+    }
+    return a
+}
+console.log('створити функцію яка повертає найменьше число з масиву');
+console.log(minArrayItem(test_array));
+
+
+// створити функцію яка приймає масив чисел та складає значення елементів масиву та повертає його.
+console.log('створити функцію яка приймає масив чисел та складає значення елементів масиву та повертає його');
+document.write('створити функцію яка приймає масив чисел та складає значення елементів масиву та повертає його' + '</br>');
+let sum = 0;
+function SummatorArrayItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+document.write(`Сума елементів масиву складає : ${SummatorArrayItems(test_array)}` + '</br>');
+
+// - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+console.log('створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.');
+document.write('створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.' + '</br>');
+function arithmetic_mean(arr) {
+    return SummatorArrayItems(arr)/arr.length
+}
+let tmp = arithmetic_mean(test_array);
+console.log(tmp);
+document.write(`середнє арифметичне значень елементів масиву дорівнює : ${tmp}` + '</br>');
+
