@@ -152,8 +152,8 @@ let test_arr = [
     55,
     12,
     "skdhgksd",
-    [333, 56, 'jgjgj'],
-    { id: 4, name: "olya"},
+    [333, 56, "jgjgj"],
+    { id: 4, name: "olya" },
 ];
 function lenght_Arr(arr) {
     let a = 0;
@@ -171,15 +171,14 @@ console.log(lenght_Arr(test_arr));
 
 function arr_items(arr) {
     let a = 0;
-    for (let i=0; i<arr.length; i++) {
-        if(typeof arr[i] === 'object' && !Array.isArray(arr[i]))
-        a += Object.keys(arr[i]).length
-    };
-    return a
-};
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "object" && !Array.isArray(arr[i]))
+            a += Object.keys(arr[i]).length;
+    }
+    return a;
+}
 
 console.log(arr_items(test_arr));
-
 
 // - створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //   Приклад
@@ -188,30 +187,69 @@ console.log(arr_items(test_arr));
 //   результат
 //   [3,5,7,9]
 function SummatorArr(arr1, arr2) {
-    let arr3 =[]
+    let arr3 = [];
     for (let i = 0; i < arr1.length; i++) {
-        arr3.push(arr1[i]+arr2[i])
+        arr3.push(arr1[i] + arr2[i]);
     }
-    return arr3
+    return arr3;
 }
-console.log(SummatorArr([1,2,3,4], [2,3,4,5]));
+console.log(SummatorArr([1, 2, 3, 4], [2, 3, 4, 5]));
 
 //  не зроблено
 // - *** приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 function array_index(arr, k) {
-    let a = arr[k+1]
-    arr[k+1] = arr[k]
-    arr[k] = a
-    return arr
+    let a = arr[k + 1];
+    arr[k + 1] = arr[k];
+    arr[k] = a;
+    return arr;
 }
-console.log(array_index([1,2,3,4,5,6,7,8,9], 3));
-console.log(array_index([1, true, '', 4, 3, null, 1, 2], 1));
-
+console.log(array_index([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+console.log(array_index([1, true, "", 4, 45, 5, 6, 7, 3, null, 1, 2], 1));
 
 // - *** створити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
-// [0,0,1,0]   => [1,0,0,0]
+let test2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]
+let test1 = [1, 0, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
+function replace_item_arr(arr) {
+    let arr0 = [];
+    for (let i = arr.length-1; i >= 0; i--) {
+        if (arr[i] === 0) {
+            arr.splice(i, 1);
+            arr0.push(0);
+        }
+    }
+    return arr.concat(arr0);
+}
+console.log(test1);
+console.log(replace_item_arr(test1));
 
+// Створити функцію яка :
+// - Додає в боді блок з текстом "Hello owu"
+function hello_div() {
+    let div = document.createElement('div');
+    div.textContent = 'Hello owu';
+    document.body.append(div);
+}
+hello_div()
+
+
+// - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
+function add_element(tags, text) {
+    let tag = document.createElement(tags);
+    tag.textContent = text;
+    document.body.append(tag);
+}
+add_element('span', 'привет всем')
+// - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
+
+function arr_car(arr, id) {
+    
+}
+
+// Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали. Всі властивості авто в обному блоці
+// - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
+// Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
+// Для кожної властивості створити всередені блока автомоблія свій блок
