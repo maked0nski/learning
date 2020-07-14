@@ -212,11 +212,11 @@ console.log(array_index([1, true, "", 4, 45, 5, 6, 7, 3, null, 1, 2], 1));
 // Приклад
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
-let test2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]
+let test2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
 let test1 = [1, 0, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
 function replace_item_arr(arr) {
     let arr0 = [];
-    for (let i = arr.length-1; i >= 0; i--) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         if (arr[i] === 0) {
             arr.splice(i, 1);
             arr0.push(0);
@@ -230,12 +230,11 @@ console.log(replace_item_arr(test1));
 // Створити функцію яка :
 // - Додає в боді блок з текстом "Hello owu"
 function hello_div() {
-    let div = document.createElement('div');
-    div.textContent = 'Hello owu';
+    let div = document.createElement("div");
+    div.textContent = "Hello owu";
     document.body.append(div);
 }
-hello_div()
-
+hello_div();
 
 // - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
 function add_element(tags, text) {
@@ -243,74 +242,129 @@ function add_element(tags, text) {
     tag.textContent = text;
     document.body.append(tag);
 }
-add_element('span', 'привет всем')
+add_element("span", "привет всем");
 
-
-// - приймає масив автомобілів (можна взяти з попередніх дз ),
-// та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
-// Для кожного автомобіля створити свій блок, та додати його в елемент, 
+// - приймає масив автомобілів , та  індентифікатор елемнту
+// в який потрібно додати список цих автомобілів.
+// Для кожного автомобіля створити свій блок, та додати його в елемент,
 // індентифікатор якого ви отримали. Всі властивості авто в обному блоці
 
 let cars = [
     {
-        brend : 'Honda',
-        model : 'Civic Sport',
-        year : 2014,
-        engine: {fuel: 'gasoline', volume: 1.8},
-        mileage : 84000,
-        color : 'black',
-        price : 12500 
+        brend: "Honda",
+        model: "Civic Sport",
+        year: 2014,
+        engine: { fuel: "gasoline", volume: 1.8 },
+        mileage: 84000,
+        color: "black",
+        price: 12500,
     },
     {
-        brend : 'Range Rover',
-        model : 'Evoque SD4',
-        year : 2012,
-        engine: {fuel: 'diesel', volume: 2.2},
-        mileage : 75000,
-        color : 'black',
-        price : 24999 
+        brend: "Range Rover",
+        model: "Evoque SD4",
+        year: 2012,
+        engine: { fuel: "diesel", volume: 2.2 },
+        mileage: 75000,
+        color: "black",
+        price: 24999,
     },
     {
-        brend : 'Volkswagen',
-        model : 'Golf VII Comfortline',
-        year : 2014,
-        engine: {fuel: 'diesel', volume: 1.6},
-        mileage : 124000,
-        color : 'metallic blue',
-        price : 12846 
+        brend: "Volkswagen",
+        model: "Golf VII Comfortline",
+        year: 2014,
+        engine: { fuel: "diesel", volume: 1.6 },
+        mileage: 124000,
+        color: "metallic blue",
+        price: 12846,
     },
     {
-        brend : 'Mazda',
-        model : 'CX-5',
-        year : 2018,
-        engine: {fuel: 'gasoline', volume: 2.5},
-        mileage : 12000,
-        color : 'white',
-        price : 19850 
-    }
+        brend: "Mazda",
+        model: "CX-5",
+        year: 2018,
+        engine: { fuel: "gasoline", volume: 2.5 },
+        mileage: 12000,
+        color: "white",
+        price: 19850,
+    },
 ];
 
-function arr_car(arr, Element_id) {
-    let tag_div = document.createElement('div');
-    tag_div.id = Element_id;
+function arr_car0(arr, Element_id) {
+    let tag_div = document.createElement("div");
+    // tag_div.id = Element_id;
     document.body.append(tag_div);
     for (let i = 0; i < arr.length; i++) {
-        let tag_ul = document.createElement('ul');
-        document.getElementById(Element_id).append(tag_ul);
+        let tag_car_div = document.createElement("div");
+        tag_car_div.id = Element_id;
+        tag_div.append(tag_car_div);
+
+        // document.getElementById(Element_id).append(tag_ul);
         for (let k of Object.values(arr[i])) {
-            tag_li = document.createElement('li');
-            tag_ul.appendChild(tag_li)
-            if (typeof k === 'object'){
-                tag_li.textContent = JSON.stringify(k);
-            }else {
-                tag_li.textContent = k
+            // tag_li = document.createElement('li');
+            // tag_ul.appendChild(tag_li)
+            if (typeof k === "object") {
+                tag_car_div.textContent += JSON.stringify(k);
+            } else {
+                tag_car_div.textContent += k;
             }
         }
     }
 }
 
-arr_car(cars, 'ID_cars');
+arr_car0(cars, "ID_cars0");
 
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
 // Для кожної властивості створити всередені блока автомоблія свій блок
+
+function arr_car(arr, Element_id) {
+    let tag_div = document.createElement("div");
+    tag_div.id = Element_id;
+    document.body.append(tag_div);
+    for (let i = 0; i < arr.length; i++) {
+        let tag_ul = document.createElement("ul");
+        document.getElementById(Element_id).append(tag_ul);
+        for (let k of Object.values(arr[i])) {
+            tag_li = document.createElement("li");
+            tag_ul.appendChild(tag_li);
+            if (typeof k === "object") {
+                tag_li.textContent = JSON.stringify(k);
+            } else {
+                tag_li.textContent = k;
+            }
+        }
+    }
+}
+
+arr_car(cars, "ID_cars");
+
+// - функція приймає 2 масиви з рівною кількістю об'єктів
+//  та з'єднює в один об'єкт користувача та місто з відповідними "id" та "user_id",
+// та повертає масив цих з'єднаних об'єктів.
+// Приклад масивів:
+let usersWithId = [
+    { id: 1, name: "vasya", age: 31, status: false },
+    { id: 2, name: "petya", age: 30, status: true },
+    { id: 3, name: "kolya", age: 29, status: true },
+    { id: 4, name: "olya", age: 28, status: false },
+];
+let citiesWithId = [
+    { user_id: 3, country: "USA", city: "Portland" },
+    { user_id: 1, country: "Ukraine", city: "Ternopil" },
+    { user_id: 2, country: "Poland", city: "Krakow" },
+    { user_id: 4, country: "USA", city: "Miami" },
+];
+
+function user_cities(user, citi) {
+    let user_plus_citi = []
+    for (let i = 0; i < user.length; i++) {
+        for (let j = 0; j < citi.length; j++) {
+            if(user.i[id] == citi.j[user_id])
+            console.log(i);
+            
+        }
+        
+    }
+    
+    return user_plus_citi
+}
+user_cities(usersWithId, citiesWithId)
