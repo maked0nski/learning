@@ -355,16 +355,14 @@ let citiesWithId = [
 ];
 
 function user_cities(user, citi) {
-    let user_plus_citi = []
     for (let i = 0; i < user.length; i++) {
         for (let j = 0; j < citi.length; j++) {
-            if(user.i[id] == citi.j[user_id])
-            console.log(i);
-            
+            if(user[i].id === citi[j].user_id){
+                user[i].adress = citi[j] 
+            }
         }
-        
     }
-    
-    return user_plus_citi
+    return user
 }
-user_cities(usersWithId, citiesWithId)
+console.log(user_cities(usersWithId, citiesWithId));
+
