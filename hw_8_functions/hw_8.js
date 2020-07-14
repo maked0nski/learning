@@ -155,6 +155,7 @@ let test_arr = [
     [333, 56, "jgjgj"],
     { id: 4, name: "olya" },
 ];
+
 function lenght_Arr(arr) {
     let a = 0;
     for (const i of arr) {
@@ -243,13 +244,14 @@ function add_element(tags, text) {
     document.body.append(tag);
 }
 add_element('span', 'привет всем')
+
+
 // - приймає масив автомобілів (можна взяти з попередніх дз ),
 // та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, 
 // індентифікатор якого ви отримали. Всі властивості авто в обному блоці
 
 let cars = [
-    car,
     {
         brend : 'Honda',
         model : 'Civic Sport',
@@ -288,12 +290,26 @@ let cars = [
     }
 ];
 
-function arr_car(arr, id) {
-    let div = document.createElement('div');
-    div.cl
+function arr_car(arr, Element_id) {
+    let tag_div = document.createElement('div');
+    tag_div.id = Element_id;
+    document.body.append(tag_div);
+    for (let i = 0; i < arr.length; i++) {
+        let tag_ul = document.createElement('ul');
+        document.getElementById(Element_id).append(tag_ul);
+        for (let k of Object.values(arr[i])) {
+            tag_li = document.createElement('li');
+            tag_ul.appendChild(tag_li)
+            if (typeof k === 'object'){
+                tag_li.textContent = JSON.stringify(k);
+            }else {
+                tag_li.textContent = k
+            }
+        }
+    }
 }
 
-
+arr_car(cars, 'ID_cars');
 
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
