@@ -290,17 +290,12 @@ let cars = [
 
 function arr_car0(arr, Element_id) {
     let tag_div = document.createElement("div");
-    // tag_div.id = Element_id;
     document.body.append(tag_div);
     for (let i = 0; i < arr.length; i++) {
         let tag_car_div = document.createElement("div");
         tag_car_div.id = Element_id;
         tag_div.append(tag_car_div);
-
-        // document.getElementById(Element_id).append(tag_ul);
         for (let k of Object.values(arr[i])) {
-            // tag_li = document.createElement('li');
-            // tag_ul.appendChild(tag_li)
             if (typeof k === "object") {
                 tag_car_div.textContent += JSON.stringify(k);
             } else {
@@ -320,12 +315,15 @@ function arr_car(arr, Element_id) {
     let tag_div = document.createElement("div");
     tag_div.id = Element_id;
     document.body.append(tag_div);
+
     for (let i = 0; i < arr.length; i++) {
         let tag_ul = document.createElement("ul");
         document.getElementById(Element_id).append(tag_ul);
+
         for (let k of Object.values(arr[i])) {
             tag_li = document.createElement("li");
             tag_ul.appendChild(tag_li);
+
             if (typeof k === "object") {
                 tag_li.textContent = JSON.stringify(k);
             } else {
@@ -357,66 +355,87 @@ let citiesWithId = [
 function user_cities(user, citi) {
     for (let i = 0; i < user.length; i++) {
         for (let j = 0; j < citi.length; j++) {
-            if(user[i].id === citi[j].user_id){
-                user[i].adress = citi[j] 
+            if (user[i].id === citi[j].user_id) {
+                user[i].adress = citi[j];
             }
         }
     }
-    return user
+    return user;
 }
 console.log(user_cities(usersWithId, citiesWithId));
 
-
-
 let rules = [
     {
-        title: 'Первое правило Бойцовского клуба.',
-        body: 'Никому не рассказывать о Бойцовском клубе.'
+        title: "Первое правило Бойцовского клуба.",
+        body: "Никому не рассказывать о Бойцовском клубе.",
     },
     {
-        title: 'Второе правило Бойцовского клуба.',
-        body: 'Никогда никому не рассказывать о Бойцовском клубе.'
+        title: "Второе правило Бойцовского клуба.",
+        body: "Никогда никому не рассказывать о Бойцовском клубе.",
     },
     {
-        title: 'Третье правило Бойцовского клуба.',
-        body: 'В схватке участвуют только двое.'
+        title: "Третье правило Бойцовского клуба.",
+        body: "В схватке участвуют только двое.",
     },
     {
-        title: 'Четвертое правило Бойцовского клуба.',
-        body: 'Не более одного поединка за один раз.'
+        title: "Четвертое правило Бойцовского клуба.",
+        body: "Не более одного поединка за один раз.",
     },
     {
-        title: 'Пятое правило Бойцовского клуба.',
-        body: 'Бойцы сражаются без обуви и голые по пояс.'
+        title: "Пятое правило Бойцовского клуба.",
+        body: "Бойцы сражаются без обуви и голые по пояс.",
     },
     {
-        title: 'Шестое правило Бойцовского клуба.',
-        body: 'Поединок продолжается столько, сколько потребуется.'
+        title: "Шестое правило Бойцовского клуба.",
+        body: "Поединок продолжается столько, сколько потребуется.",
     },
     {
-        title: 'Седьмое правило Бойцовского клуба.',
-        body: 'Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.'
+        title: "Седьмое правило Бойцовского клуба.",
+        body:
+            "Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.",
     },
     {
-        title: 'Восьмое и последнее правило Бойцовского клуба.',
-        body: 'Новичок обязан принять бой.'
+        title: "Восьмое и последнее правило Бойцовского клуба.",
+        body: "Новичок обязан принять бой.",
     },
-
 ];
 function f_rules(arr) {
-    let div_1 = document.createElement('div');
-    div_1.id = 'wrap';
+    let div_1 = document.createElement("div");
+    div_1.id = "wrap";
     document.body.append(div_1);
     for (let i = 0; i < arr.length; i++) {
-        let div_0 = document.createElement('div');
-        div_1.appendChild(div_0)
-        let h3 = document.createElement('h3');
+        let div_0 = document.createElement("div");
+        div_1.appendChild(div_0);
+        let h3 = document.createElement("h3");
         h3.textContent = arr[i].title;
         div_0.appendChild(h3);
-        let span = document.createElement('span');
+        let span = document.createElement("span");
         span.textContent = arr[i].body;
         div_0.appendChild(span);
     }
-};
+}
 
 f_rules(rules);
+
+// ===========додаткове від віктора========
+// 1) Точная степень двойки.
+// Дано натуральное число N.
+// Выведите слово YES, если число N является точной степенью двойки,
+// или слово NO в противном случае.
+// Операцией возведения в степень пользоваться нельзя!
+
+function degree(n) {
+    let i = 1;
+    while (i < n) {
+        i *= 2;
+        console.log(i);
+    }
+    if (i === n) {
+        console.log("YES");
+    } else {
+        console.log("NO");
+    }
+}
+
+degree(128);
+
