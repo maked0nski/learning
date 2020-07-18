@@ -379,11 +379,14 @@ let car_object = {
                     максимальна швидкість : ${this.max_speed} км/год
                     Об'єм двигуна : ${this.engine}`);
     },
-    increaseMaxSpeed : function(new_speed){
-        this.max_speed = new_speed;
+    increaseMaxSpeed : function(newSpeed) {
+        this.max_speed = newSpeed;
     },
-    changeYear : function(new_year){
-        this.year = new_year;
+    changeYear : function(newValue) {
+        this.year = newValue;
+    },
+    addDriver : function(driver) {
+        this.driver = driver;
     }
 };
 
@@ -392,4 +395,5 @@ car_object.drive();
 car_object.info();
 car_object.increaseMaxSpeed(300);
 car_object.changeYear(2010);
-car_object.info();
+car_object.addDriver({name : 'Viktor', age : 34, experience : 12});
+console.log(car_object);
