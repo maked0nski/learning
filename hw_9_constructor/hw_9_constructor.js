@@ -352,3 +352,44 @@ console.log(tag_form_class);
 console.log(tag_option_class);
 console.log(tag_select_class);
 console.log("__________________________________________");
+
+// ==============================================
+// - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+let car_object = {
+    model : 'BMV',
+    brend : 'X5',
+    year :  2005,
+    max_speed : 200,
+    engine : 8,
+    drive : function () {
+        console.log(`Їдемо зі швидкісттю ${this.max_speed} на годину`);
+    },
+    info : function () {
+        console.log(`Коротко про машину: 
+                    модель : ${this.model}
+                    Виробник : ${this.brend}
+                    Рік випуску : ${this.year}
+                    максимальна швидкість : ${this.max_speed} км/год
+                    Об'єм двигуна : ${this.engine}`);
+    },
+    increaseMaxSpeed : function(new_speed){
+        this.max_speed = new_speed;
+    },
+    changeYear : function(new_year){
+        this.year = new_year;
+    }
+};
+
+
+car_object.drive();
+car_object.info();
+car_object.increaseMaxSpeed(300);
+car_object.changeYear(2010);
+car_object.info();
