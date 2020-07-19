@@ -499,7 +499,7 @@ class girl {
     constructor(name, age, footSize) {
         this.name = name,
         this.age = age,
-        this.footSize = boot
+        this.footSize = footSize
     };
 };
 class prince {
@@ -509,3 +509,24 @@ class prince {
         this.boot = boot
     };
 };
+
+let girl1 = new girl('Lida', 18, 37)
+let girl2 = new girl('Inna', 19, 35)
+let girl3 = new girl('Ira', 20, 36)
+let girl4 = new girl('Olga', 21, 38)
+let girl5 = new girl('Mira', 22, 39)
+let girl6 = new girl('Lena', 22, 40)
+let girl7 = new girl('Anna', 23, 41)
+let girl8 = new girl('Vira', 18, 30)
+let girl9 = new girl('Vika', 23, 31)
+let girl10 = new girl('Nata', 32, 32)
+
+let girls = [girl1, girl2, girl3, girl4, girl5, girl6, girl7, girl8, girl9, girl10]
+console.log(girls);
+
+let prince1 = new prince('Josef', 33, 32)
+for (let i = 0; i < girls.length; i++) {
+    if (girls[i].footSize === prince1.boot )
+        console.log(girls[i]);
+}
+console.log(prince1.boot);
