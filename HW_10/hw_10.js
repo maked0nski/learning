@@ -1,6 +1,71 @@
-let numbers = [1,6,9,3,9,4,15,10, 99,85,80];
-numbers.sort((a,b) => {
-    return a-b
-});
+// - создать массив с 20 числами.
+let numbers = [
+    1,
+    6,
+    9,
+    3,
+    16,
+    4,
+    15,
+    10,
+    99,
+    85,
+    80,
+    -8,
+    55,
+    -12,
+    54,
+    32,
+    18,
+    -3,
+    -25,
+    2,
+];
 
-console.log(numbers);
+// -- при помощи метода sort и колбека  отсортировать массив.
+// numbers.sort((a,b) => a-b)
+
+// -- при помощи метода sort и колбека отсортировать массив в ниспадающем напралении.
+// numbers.sort((a,b) => b-a)
+
+// -- при помощи filter получить числа кратные 3
+// let filtred_3 =  numbers.filter((value) => !(value % 3));
+
+// -- при помощи filter получить числа кратные 10
+// let filtred_10 = numbers.filter((value) => !(value%10));
+
+// -- перебрать (проитерировать) массив при помощи foreach()
+// numbers.forEach(value => console.log(value));
+
+// -- перебрать массив при помощи map() и получить новый массив в котором все значения будут в 3 раза больше
+// let mapArray = numbers.map((value) => value * 3);
+
+
+// - создать массив со словами на 15-20 элементов.
+let words = ['weather', 'rain', 'skeell', 'box', 'headphouns', 'laptop', 'lamp', 'credit', 'wall', 'flour', 'charger', 'table', 'title', 'array', 'crash', 'job', 'work', 'mouse', 'car', 'wood' ]
+
+// -- отсортировать его по алфавиту в восходящем порядке.
+// words.sort();
+
+// -- отсортировать его по алфавиту  в нисходящем порядке.
+// words.sort((a,b) => {
+//     if (a<b){
+//         return 1
+//     }
+//     return -1
+// })
+
+// -- отфильтровать слова длиной менее 4х символов
+// let symbol_4 = words.filter(value => {
+//     if (value.length>4) {
+//         console.log(value);
+//     }
+// });
+
+// -- перебрать массив при помощи map() и получить новый массив в котором все значения будут со знаком "!" в конце
+// let newArr = words.map(value => value + '!')
+
+
+
+
+console.log(newArr);
