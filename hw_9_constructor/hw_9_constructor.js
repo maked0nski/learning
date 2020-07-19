@@ -530,3 +530,38 @@ for (let i = 0; i < girls.length; i++) {
         console.log(girls[i]);
 }
 console.log(prince1.boot);
+
+
+
+// ==============================================
+// -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
+// --Створити 10 попелюшок , покласти їх в масив
+// --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
+// -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
+// ==============================================
+
+function cinderella (name, age, footSize) {
+    this. name = name,
+    this.age = age,
+    this.footSize = footSize
+};
+
+function princeClass(name, age, boot) {
+    this.name = name,
+    this.age = age,
+    this.boot = boot,
+    this.toFindeCinderella = function(){
+        for (let i=0; i < cinderellas.length; i++){
+            if (this.boot === cinderellas[i].footSize) {
+                console.log(cinderellas[i]);
+            };
+        };
+    };
+};
+
+let cinderellas = [(new cinderella('Masha', 24, 23)), new cinderella('Lida', 18, 37), new cinderella('Inna', 19, 35), (new cinderella('Ira', 25, 35)), new cinderella('Nata', 32, 32), new cinderella('Vika', 23, 31), new cinderella('Vira', 18, 30), new cinderella('Anna', 23, 41), new cinderella('Lena', 22, 40), new cinderella('Mira', 22, 39) ];
+let princeClass1 = new princeClass('Viktor', 24, 35);
+
+console.log(cinderellas);
+console.log(princeClass1);
+princeClass1.toFindeCinderella()
