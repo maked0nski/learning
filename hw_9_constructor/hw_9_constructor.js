@@ -397,3 +397,115 @@ car_object.increaseMaxSpeed(300);
 car_object.changeYear(2010);
 car_object.addDriver({name : 'Viktor', age : 34, experience : 12});
 console.log(car_object);
+
+// ==============================================
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+function CarObjectFunc (model, brend, year, max_speed, engine){
+    this.model = model,
+    this.brend = brend,
+    this.year = year,
+    this.max_speed = max_speed,
+    this.engine = engine,
+
+    this.drive = function(){
+        console.log(`їдемо зі швидкістю ${this.max_speed} на годину`); 
+    },
+    this.info = function() {
+        console.log(`Я купив собі автомобіль :
+                    Модель : ${this.model}
+                    Виробник : ${this.brend},
+                    ${this.year} року випуску
+                    Максимальна швидкість авто ${max_speed}
+                    Об'єм двигуна : ${engine}`); 
+    },
+
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.max_speed = newSpeed;
+    },
+    this.changeYear = function (newValue) {
+        this.year = newValue;
+    },
+    this.addDriver = function (driver) {
+        this.driver = driver;
+    }
+};
+
+let firstCar = new CarObjectFunc('407', 'peugot', 2005, 200, 2)
+console.log(firstCar);
+firstCar.increaseMaxSpeed(250);
+firstCar.addDriver({name: 'Andrey', age : 28 , experience : 2})
+
+console.log(firstCar);
+
+// ==============================================
+// - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+class CarObject {
+    constructor(model, brend, year, max_speed, engine) {
+        this.model = model,
+        this.brend = brend,
+        this.year = year,
+        this.max_speed = max_speed,
+        this. engine = engine
+    };
+    drive(){
+        console.log(`їдемо зі швидкістю ${this.max_speed} на годину`);
+    };
+    info(){
+        console.log(`Я купив собі автомобіль :
+                    Модель : ${this.model}
+                    Виробник : ${this.brend},
+                    ${this.year} року випуску
+                    Максимальна швидкість авто ${max_speed}
+                    Об'єм двигуна : ${engine}`); 
+    };
+    increaseMaxSpeed(newSpeed) {
+        this.max_speed = newSpeed;
+    };
+    changeYear(newValue) {
+        this.max_speed = newValue;
+    };
+    addDriver(driver) {
+        this.driver = driver;
+    }
+}
+
+let firstCar1 = new CarObjectFunc('3008', 'peugot', 2015, 200, 2);
+firstCar1.increaseMaxSpeed(500);
+firstCar1.changeYear(2018);
+firstCar1.addDriver({name : 'Mark', age : 28, experience : 8});
+console.log(firstCar1);
+
+// ==============================================
+// -створити класс попелюшка з полями ім'я, вік, розмір ноги
+// --Створити 10 попелюшок , покласти їх в масив
+// --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
+// ==============================================
+class girl {
+    constructor(name, age, footSize) {
+        this.name = name,
+        this.age = age,
+        this.footSize = boot
+    };
+};
+class prince {
+    constructor(name, age, boot) {
+        this.name = name,
+        this.age = age,
+        this.boot = boot
+    };
+};
