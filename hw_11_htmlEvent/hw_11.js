@@ -8,7 +8,13 @@
 // };
 
 // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
-
+const forma = document.forms.myForm;
+let element_form = document.getElementById('form');
+forma.buttom.onclick = (ev) => {
+    ev.preventDefault();
+    element_form.style.display = 'none';
+    console.log('yepp');
+}
 
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 
