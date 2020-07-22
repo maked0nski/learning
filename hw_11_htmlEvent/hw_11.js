@@ -1,5 +1,6 @@
 // // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, 
 // // чтобы при клике на кнопку исчезал элемент с id="text".
+
 // const forma = document.forms.myForm;
 // let element_id = document.getElementById('text');
 // forma.buttom.onclick = (ev) => {
@@ -7,16 +8,32 @@
 //     element_id.style.display = 'none'
 // };
 
-// - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
-const forma = document.forms.myForm;
-let element_form = document.getElementById('form');
-forma.buttom.onclick = (ev) => {
-    ev.preventDefault();
-    element_form.style.display = 'none';
-    console.log('yepp');
-}
+// // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+//
+//
+// const forma = document.forms.myForm;
+// let element_form = document.getElementById('form');
+// forma.buttom.onclick = (ev) => {
+//     ev.preventDefault();
+//     element_form.style.display = 'none';
+// }
 
-// - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+// // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на
+// // кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+//
+// const forma = document.forms.myForm;
+// let element_form = document.getElementById('form');
+// let input_text = forma.human_age
+// let input_value = input_text.value
+// forma.buttom.onclick = (ev) => {
+//     ev.preventDefault();
+//     if (typeof input_value === 'number'){
+//         if (+input_value >= 18) {
+//
+//             alert('В карточку добавлена информация о Вашем возрасте. Спасибо!')
+//         } else alert('Вы не достигли полнолетия. Сорри :( ')
+//     } else alert(`Вы ввели : "${input_value}" не является числом. Повторите попытку`)
+// };
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
 
@@ -24,7 +41,8 @@ forma.buttom.onclick = (ev) => {
 // Вывести список комментариев в документ, каждый в своем блоке.
 //  Добавьте каждому комментарию по кнопке для сворачивания его body.
 
-// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та
+// виводиться на консоль інформація з цих 2х форм.
 // Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
 
