@@ -215,3 +215,11 @@ btn.onclick = (ev) => {
 
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
 
+let  image_array = [
+    'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239476_006.jpg',
+    'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239438_009.jpg',
+    'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239460_010.jpg',
+    'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239433_013.jpg',
+    'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239459_017.jpg'
+];
+
