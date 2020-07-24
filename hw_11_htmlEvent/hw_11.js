@@ -154,31 +154,23 @@
 // Другий параметр визначає кліькіть ячеєк в кожній строці.
 // Третій параметр визначає елемент в який потрібно таблицю додати.
 
-function table(tr, td, id) {
+function CreatTable(tr, td, id) {
     let table = document.createElement('table');
     table.setAttribute('bordercolor', 'black');
-    let element = document.getElementById('text')
-    document.element.appendChild(table);
+    let element = document.getElementById(id)
+    element.appendChild(table);
     for (let i = 0; i < tr; i++) {
         let line = document.createElement('tr');
         table.appendChild(line);
         for(let k=0; k < td; k++){
             let col = document.createElement('td');
             line.appendChild(col);
-            col.innerText =  i;
+            col.innerText = k;
         }
     }
-
 }
 
-
-table(3, 8, 'text')
-
-
-
-
-
-
+CreatTable(3, 8, 'content');
 
 
 
