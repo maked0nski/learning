@@ -154,7 +154,7 @@
 // Другий параметр визначає кліькіть ячеєк в кожній строці.
 // Третій параметр визначає елемент в який потрібно таблицю додати.
 
-function CreatTable(tr, td, id) {
+function CreatTable(tr, td, id, content = 'text') {
     let table = document.createElement('table');
     table.setAttribute('bordercolor', 'black');
     let element = document.getElementById(id)
@@ -165,12 +165,12 @@ function CreatTable(tr, td, id) {
         for(let k=0; k < td; k++){
             let col = document.createElement('td');
             line.appendChild(col);
-            col.innerText = k;
+            col.innerText = content;
         }
     }
 }
 
-CreatTable(3, 8, 'content');
+CreatTable(3, 8, 'content', 'сало');
 
 
 
@@ -180,4 +180,38 @@ CreatTable(3, 8, 'content');
 // При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 
+let tag_div = document.createElement('div');
+let forms_table = document.createElement('form');
+let input_tr = document.createElement('input')
+let input_td = document.createElement('input')
+let input_text = document.createElement('input')
+let  btn = document.createElement('button');
+
+forms_table.name = 'tabl'
+input_tr.name = 'line';
+input_tr.placeholder = 'кількість рядків';
+input_td.name = 'row';
+input_td.placeholder = 'кількість ячеєк';
+input_text.name = 'content';
+input_text.placeholder = 'вмиіст ячеєк';
+btn.type = 'submit';
+btn.innerText = 'Створи!'
+
+document.body.appendChild(tag_div);
+tag_div.appendChild(forms_table);
+forms_table.appendChild(input_tr);
+forms_table.appendChild(input_td);
+forms_table.appendChild(input_text);
+forms_table.appendChild(btn);
+
+btn.onclick = (ev) => {
+    ev.preventDefault();
+    let x = document.forms.tabl
+    console.log(document.forms.tabl);
+    console.log(document.forms.tabl.line);
+    CreatTable(+x.line.value, +x.row.value, 'text', x.content)
+}
+
+
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+
