@@ -223,3 +223,81 @@ let  image_array = [
     'https://kaifolog.ru/uploads/posts/2013-03/thumbs/1363239459_017.jpg'
 ];
 
+let block = document.createElement('div');
+document.body.appendChild(block);
+
+let divImage = document.createElement('div');
+let divImages = document.createElement('img');
+divImage.appendChild(divImages)
+divImages.id= 'Image';
+block.appendChild(divImage);
+
+let currentIndexImage = 0;
+chengeImage()
+divImages.style.width = '350px';
+divImages.style.padding = '50px';
+
+let forms = document.createElement('form')
+forms.name = 'LeftRight';
+block.appendChild(forms)
+
+let btnLeft = document.createElement('button');
+btnLeft.type = 'submit';
+btnLeft.name = 'Left'
+btnLeft.innerText = 'Сюда'
+let btnRight = document.createElement('button');
+btnRight.type = 'submit';
+btnRight.name = 'Right'
+btnRight.innerText = 'Туда'
+
+forms.appendChild(btnLeft);
+forms.appendChild(btnRight);
+
+function chengeImage(){
+    divImages.src = image_array[currentIndexImage]
+}
+
+block.addEventListener('click', (ev) => {
+    let {target} = ev;
+    ev.preventDefault();
+
+    if (target.name === 'Left'){
+
+        if (currentIndexImage === 0) {
+            currentIndexImage = image_array.length - 1;
+            chengeImage();
+        }
+        currentIndexImage--
+        chengeImage();
+    }
+
+    if (target.name === 'Right') {
+        if (currentIndexImage === image_array.length-1) {
+            currentIndexImage = 0
+            chengeImage();
+        }
+        currentIndexImage++;
+        chengeImage();
+    }
+})
+
+// btnLeft.onclick = (ev) => {
+//     ev.preventDefault();
+//
+//     if (currentIndexImage === 0) {
+//         currentIndexImage = image_array.length-1;
+//         chengeImage();
+//     }
+//     currentIndexImage--
+//     chengeImage()
+// }
+//
+// btnRight.onclick = (ev) => {
+//     ev.preventDefault();
+//     if (currentIndexImage === image_array.length-1) {
+//         currentIndexImage = 0
+//         chengeImage(currentIndexImage);
+//     }
+//     currentIndexImage++;
+//     chengeImage(currentIndexImage);
+// }
