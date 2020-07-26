@@ -379,21 +379,24 @@
 //
 let key = 0
 function CreateMenu() {
+
     let h1 = document.getElementsByTagName('h1')
     let h2 = document.getElementsByTagName('h2')
-    console.log(h1);
+
+    let arr = [h1,h2]
+    console.log(h1)
+
     let ul = document.createElement('ul')
     ul.id = 'menu'
     document.body.prepend(ul)
 
+    for (i in arr){
+        let tag = arr[i]
+        for (let j = 0; j < tag.length; j++) {
+            let li = CreateLi(ul)
+            CreateLink(tag, j, li)
+        }
 
-    for (let i = 0; i < h1.length; i++) {
-        let li = CreateLi(ul)
-        CreateLink(h1, i, li)
-    }
-    for (let i = 0; i < h2.length; i++) {
-        let li = CreateLi(ul)
-        CreateLink(h2, i, li)
     }
 }
 
@@ -407,13 +410,13 @@ function CreateLink(array, index, li) {
     let a = document.createElement('a')
     a.innerText = array[index].innerText;
     li.appendChild(a);
-    a.href = '#'+key+index;
+    a.href = '#'+array[index].tagName+index;
     CreateAnchor(array, index, key)
     key++
 }
 
 function CreateAnchor(array, index, key) {
-    array[index].id = ''+key + index
+    array[index].id = ''+ array[index].tagName + index
 }
 
 CreateMenu()
