@@ -390,7 +390,7 @@ function CreateMenu() {
     ul.id = 'menu'
     document.body.prepend(ul)
 
-    for (i in arr){
+    for (let i in arr){
         let tag = arr[i]
         for (let j = 0; j < tag.length; j++) {
             let li = CreateLi(ul)
@@ -415,7 +415,7 @@ function CreateLink(array, index, li) {
     key++
 }
 
-function CreateAnchor(array, index, key) {
+function CreateAnchor(array, index) {
     array[index].id = ''+ array[index].tagName + index
 }
 
