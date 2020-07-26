@@ -371,60 +371,56 @@
 // }
 //
 
+// //
+// //
+// // -- создать скрипт, который берет считывает на странице (rules.html) текст
+// // и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
+// //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
+// //
+// function CreateMenu() {
+//
+//     let h1 = document.getElementsByTagName('h1')
+//     let h2 = document.getElementsByTagName('h2')
+//
+//     let arr = [h1,h2]
+//
+//     let ul = document.createElement('ul')
+//     ul.id = 'menu'
+//     document.body.prepend(ul)
+//
+//     for (let i in arr){
+//         for (let j = 0; j < arr[i].length; j++) {
+//             let li = CreateLi(ul)
+//             CreateLink(arr[i], j, li)
+//         }
+//
+//     }
+// }
+//
+// function  CreateLi(ul) {
+//     let li = document.createElement('li')
+//     ul.appendChild(li)
+//     return li
+// }
+//
+// function CreateLink(array, index, li) {
+//     let a = document.createElement('a')
+//     a.innerText = array[index].innerText;
+//     li.appendChild(a);
+//     a.href = '#'+array[index].tagName+index;
+//     CreateAnchor(array, index)
+// }
+//
+// function CreateAnchor(array, index) {
+//     array[index].id = ''+ array[index].tagName + index
+// }
+//
+// CreateMenu()
+//
+
+
 //
 //
-// -- создать скрипт, который берет считывает на странице (rules.html) текст
-// и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
-//     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
-//
-let key = 0
-function CreateMenu() {
-
-    let h1 = document.getElementsByTagName('h1')
-    let h2 = document.getElementsByTagName('h2')
-
-    let arr = [h1,h2]
-    console.log(h1)
-
-    let ul = document.createElement('ul')
-    ul.id = 'menu'
-    document.body.prepend(ul)
-
-    for (let i in arr){
-        let tag = arr[i]
-        for (let j = 0; j < tag.length; j++) {
-            let li = CreateLi(ul)
-            CreateLink(tag, j, li)
-        }
-
-    }
-}
-
-function  CreateLi(ul) {
-    let li = document.createElement('li')
-    ul.appendChild(li)
-    return li
-}
-
-function CreateLink(array, index, li) {
-    let a = document.createElement('a')
-    a.innerText = array[index].innerText;
-    li.appendChild(a);
-    a.href = '#'+array[index].tagName+index;
-    CreateAnchor(array, index, key)
-    key++
-}
-
-function CreateAnchor(array, index) {
-    array[index].id = ''+ array[index].tagName + index
-}
-
-CreateMenu()
-
-
-
-
-
 // // -- взять массив пользователей
 // let usersWithAddress = [
 //     {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
@@ -439,18 +435,181 @@ CreateMenu()
 //     {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
 //     {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
 // ];
-// Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
-// 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
-// 2й - оставляет старше 29 лет включительно
-// 3й - оставляет тех у кого город киев
-// Данные выводить в документ
+//
+// // Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
+// // 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
+// // 2й - оставляет старше 29 лет включительно
+// // 3й - оставляет тех у кого город киев
+// // Данные выводить в документ
+//
+// const  content = document.getElementById('content')
+// const UserDiv = document.createElement('div')
+//
+// UserDiv.appendChild(CreateContent(usersWithAddress))
+//
+// const input1 = document.createElement('input')
+// const lable1 = document.createElement('label')
+// input1.type = 'checkbox'
+// input1.id = 'status'
+// lable1.innerText = 'со статусом false'
 //
 //
+// const input2 = document.createElement('input')
+// const lable2 = document.createElement('label')
+// input2.type = 'checkbox'
+// input2.id = 'age'
+// lable2.innerText = 'старше 29 лет'
 //
-// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
-// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
-// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-//     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+// const input3 = document.createElement('input')
+// const lable3 = document.createElement('label')
+// input3.type = 'checkbox'
+// input3.id = 'city'
+// lable3.innerText = 'город киев'
 //
 //
-// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+// const button = document.createElement('button')
+// button.innerText = 'Filter'
+//
+// content.appendChild(UserDiv);
+// content.appendChild(input1);
+// content.appendChild(lable1);
+// content.appendChild(input2);
+// content.appendChild(lable2);
+// content.appendChild(input3);
+// content.appendChild(lable3);
+// content.appendChild(button);
+// // console.log(myArray.filter(value => value.status))
+//
+// button.onclick = (ev) =>{
+//     let  myArray = JSON.parse(JSON.stringify(usersWithAddress));
+//     if (input1.checked) {
+//         myArray = myArray.filter(value => !value.status)
+//         console.log(myArray)
+//     }
+//     if (input2.checked) {
+//         myArray = myArray.filter(value => value.age >= 29)
+//         console.log(myArray)
+//     }
+//     if (input3.checked) {
+//         myArray = myArray.filter(value => value.address.city === 'Kyiv')
+//         console.log(myArray)
+//     }
+//     UserDiv.innerHTML = '';
+//     UserDiv.appendChild(CreateContent(myArray));
+//     console.log(myArray);
+// }
+//
+// function CreateContent(arr) {
+//     const main = document.createElement('div')
+//     arr.forEach(item =>{
+//     const div = document.createElement('div')
+//     div.innerHTML = JSON.stringify(item);
+//     main.appendChild(div);
+//     })
+//     return main
+// }
+//
+
+
+
+
+// // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
+// // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
+// // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
+// // Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+
+// let nextBTN = document.createElement('button')
+// nextBTN.innerText = 'next'
+// nextBTN.style.marginTop = '100px'
+// nextBTN.style.display = 'block'
+// document.body.appendChild(nextBTN)
+
+// let prevBTN = document.createElement('button')
+// prevBTN.innerText = 'prev'
+// document.body.appendChild(prevBTN)
+
+// let wraper1 = document.createElement('div')
+// document.body.appendChild(wraper1)
+
+// for (let index = 0; index < 10; index++) {
+//     const element = document.createElement('div')
+//     element.innerHTML = `div - ${index}`
+//     wraper1.appendChild(element)
+
+//     for (let i = 0; i < 10; i++) {
+//         const element_ = document.createElement('div')
+//         element_.innerHTML = `div - ${i}`
+//         element_.style.marginLeft = '100px'
+//         element.appendChild(element_)
+//         for (let i = 0; i < 10; i++) {
+//             const element__ = document.createElement('div')
+//             element__.innerHTML = `div - ${i}`
+//             element__.style.marginLeft = '100px'
+//             element_.appendChild(element__)
+//         }
+//     }
+// }
+
+
+// const handlerNext = (element) => {
+//     element.classList.remove('active')
+//     if (element.firstElementChild) {
+//         element.firstElementChild.classList.add('active')
+//         return element.firstElementChild
+//     }
+//     if (element.nextElementSibling) {
+//         element.nextElementSibling.classList.add('active')
+//         return element.nextElementSibling
+//     }
+//     element.parentElement.nextElementSibling.classList.add('active')
+//     return element.parentElement.nextElementSibling
+// }
+
+// const handlerPrev = (element) => {
+//     element.classList.remove('active')
+//     if (element.previousElementSibling) {
+//         element.previousElementSibling.classList.add('active')
+//         return element.previousElementSibling
+//     }
+//     if(element.parentElement.previousElementSibling){
+//         element.parentElement.previousElementSibling.classList.add('active')
+//         return element.parentElement.previousElementSibling
+//     }
+//     element.parentElement.classList.add('active')
+//     return element.parentElement
+// }
+
+// let activeElement;
+// nextBTN.addEventListener('click', (e) => {
+//     activeElement = handlerNext(activeElement ? activeElement : wraper1)
+// })
+// prevBTN.addEventListener('click', (e) => {
+//     activeElement = handlerPrev(activeElement ? activeElement : wraper1)
+// })
+
+
+
+
+
+
+// //*** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+
+// let p5 = document.createElement('p')
+// p5.innerText = 'При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан'
+// document.body.appendChild(p5)
+
+// p5.addEventListener('mouseup', (e) => {
+//     let {anchorOffset, focusOffset} = window.getSelection()
+//     console.log(anchorOffset, focusOffset, e.target)
+
+//     let range = new Range()
+//     range.setStart(e.target.firstChild, anchorOffset);
+//     range.setEnd(e.target.lastChild, focusOffset);
+
+//     let oldText = range.extractContents()
+//     let newText = document.createElement('b')
+//     newText.textContent = oldText.textContent
+
+//     range.insertNode(newText)
+//     console.log(oldText)
+// })
