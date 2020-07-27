@@ -32,16 +32,37 @@
 //     Сделайте ваш скрипт как можно более универсальным.
 //
 
-let form = document.forms.myForm;
+// let form = document.forms.myForm;
 let ElementForm = document.getElementById('form')
-ElementForm.onclick = (ev) => {
-    let {target} = ev.target
-    console.log(ev.target.id)
+// ElementForm.onclick = (ev) => {
+//     let {target} = ev.target
+//     console.log(ev.target.id)
+// }
+function  saveForm(t) {
+    console.log(setDataForm(t));
+    console.log(t);
 }
 
+function setDataForm(tag) {
+    for (let i = 0; i < tag.length; i++) {
+        let tagElement = tag[i];
+    if (tagElement.type === 'checkbox' || tagElement.type === 'radio'){
+        tagElement.checked
+        ? tagElement.value = true
+            : tagElement.value = false
+    }
+    localStorage.setItem(tagElement.id, tagElement.value)
+    }
+}
 
-
-
+function getLockalStorr(tag) {
+    for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage.hasOwnProperty(tag.children[i].id)){
+            tag.children[i].value = localStorage.getItem(tag.children[i].id)
+        }
+        
+    }
+}
 
 // -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
 // Требование : хранить историю своих изменений (даже после перезагрузки страницы).
