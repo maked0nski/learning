@@ -13,17 +13,17 @@
 <fieldset>
     <legend>Заповніть будь-ласка форму</legend>
 
-    <form action="" id="form" name="myForm" oninput="saveForm(this)">
-        <div><input id = 'firstName' name="firstName" type="text" placeholder="Введіть імя"></div>
-        <div><input id = 'familyName'  name="familyName" type="text" placeholder="Введіть Прізвище"></div>
-        <div><input id = 'age' name="age"  type="number" placeholder="Введіть Ваш вік"></div>
-        <div>
+    <form id="form" name="myForm" oninput="saveForm(this)">
+        <input id = 'firstName' name="firstName" type="text" placeholder="Введіть імя">
+        <<input id = 'familyName'  name="familyName" type="text" placeholder="Введіть Прізвище">
+        <input id = 'age' name="age"  type="number" placeholder="Введіть Ваш вік">
+
             <h4>Сімейний стан</h4>
-            <input id = 'children' type="checkbox" name="children" value="false"> Дети есть?<Br>
+            <input id = 'childs' type="checkbox" name="children" value="false"> Дети есть?<Br>
             <input id = 'maried' type="radio" name="maried" value="false"> Одружений<Br>
             <input id = "not_maried" type="radio" name="maried" value="false"> Не Одружений<Br>
-        </div>
-        <div>
+
+
             <h4>Домашні тварини</h4>
             <select id="pet" name="pet">
                 <option>Виберіть зі списка</option>
@@ -32,11 +32,11 @@
                 <option>Крокодил</option>
                 <option>Вихухаль</option>
             </select>
-        </div>
-        <div>
+
+
             <textarea name="name_pet" id="name_pet" cols="30" rows="10" placeholder="Введіть кличку та опишіть тварину"></textarea>
-        </div>
-        <button type="submit" name="button">Зберегти</button>
+
+<!--        <button type="submit" name="button">Зберегти</button>-->
     </form>
 </fieldset>
 

@@ -33,34 +33,34 @@
 //
 
 // let form = document.forms.myForm;
-let ElementForm = document.getElementById('form')
-// ElementForm.onclick = (ev) => {
-//     let {target} = ev.target
-//     console.log(ev.target.id)
-// }
+let form1 = document.getElementById('form');
+getDataForm(form1);
+
 function  saveForm(t) {
-    console.log(setDataForm(t));
-    console.log(t);
+    setDataForm(t);
 }
 
 function setDataForm(tag) {
     for (let i = 0; i < tag.length; i++) {
-        let tagElement = tag[i];
-    if (tagElement.type === 'checkbox' || tagElement.type === 'radio'){
-        tagElement.checked
-        ? tagElement.value = true
-            : tagElement.value = false
-    }
-    localStorage.setItem(tagElement.id, tagElement.value)
+        const tagElement = tag[i];
+        if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
+            tagElement.checked
+            ? tagElement.value = true
+                : tagElement.value = false
+
+        localStorage.setItem(tagElement.id, tagElement.value);
     }
 }
 
-function getLockalStorr(tag) {
+function getDataForm(tag) {
     for (let i = 0; i < localStorage.length; i++) {
+        console.log(tag.children)
         if (localStorage.hasOwnProperty(tag.children[i].id)){
-            tag.children[i].value = localStorage.getItem(tag.children[i].id)
+            tag.children[i].value = localStorage.getItem(tag.children[i].id);
+            if (tag.children[i].value === 'true'){
+                tag.children[i].setAttribute('checked', 'checked')
+            }
         }
-        
     }
 }
 
