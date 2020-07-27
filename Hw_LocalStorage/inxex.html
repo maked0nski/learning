@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="content"></div>
+<textarea name='text' id="textarea"></textarea>
+<fildset>
+    <legend>Заповніть будь-ласка форму</legend>
+
+    <form action="" id="form" name="myForm">
+    <!--    <h3>Заповніть будь-ласка форму</h3>-->
+        <div><input id = 'firstName' type="text" placeholder="Введіть імя"></div>
+        <div><input id = 'familyName' type="text" placeholder="Введіть Прізвище"></div>
+        <div><input id = 'age' type="number" placeholder="Введіть Ваш вік"></div>
+        <div>
+            <h4>Сімейний стан</h4>
+    <!--        <input id = 'wife' type="radio" name="wife">-->
+            <input id = 'maried' type="radio" name="wife" value="rad1"> Одружений<Br>
+            <input id = "not_maried" type="radio" name="wife" value="rad2"> Не Одружений<Br>
+        </div>
+        <div>
+            <h4>Домашні тварини</h4>
+
+            <select id="pet">
+                <option>Виберіть зі списка</option>
+                <option>Кіт</option>
+                <option>Собака</option>
+                <option>Крокодил</option>
+                <option>Вихухаль</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="name_pet" id="name_pet" cols="30" rows="10" placeholder="Введіть кличку та опишіть тварину"></textarea>
+        </div>
+        <button type="submit" name="button">Зберегти</button>
+    </form>
+</fildset>
+
+<script src="LocalStorage.js"></script>
+</body>
+</html>
