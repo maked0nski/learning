@@ -33,14 +33,14 @@
 //
 
 // let form = document.forms.myForm;
-let form1 = document.getElementById('form');
-getDataForm(form1);
+let forma = document.getElementById('form');
+getData(forma);
 
 function  saveForm(t) {
-    setDataForm(t);
+    setData(t);
 }
 
-function setDataForm(tag) {
+function setData(tag) {
     for (let i = 0; i < tag.length; i++) {
         const tagElement = tag[i];
         if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
@@ -52,7 +52,7 @@ function setDataForm(tag) {
     }
 }
 
-function getDataForm(tag) {
+function getData(tag) {
     for (let i = 0; i < localStorage.length; i++) {
         console.log(tag.children)
         if (localStorage.hasOwnProperty(tag.children[i].id)){
