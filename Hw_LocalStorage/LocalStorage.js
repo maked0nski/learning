@@ -1,3 +1,11 @@
+let three = document.getElementById('three')
+let two = document.getElementById('two')
+let one = document.getElementById('one')
+three.style.display = 'none'
+two.style.display = 'none'
+one.style.display = 'none'
+
+
 // // - Дана textarea.
 // //     В неё вводится текст.
 // //     Сделайте так, чтобы после захода на эту страницу через некоторое время, введенный текст остался в textarea.
@@ -16,8 +24,8 @@
 //     localStorage.setItem('TextArea', TextArea.value)
 // }
 
-// Второй вариант:
-
+// // Второй вариант:
+// one.style.display = 'block'
 // let text = document.getElementById('textarea')
 // text.innerText = localStorage.getItem('text_input')
 // text.oninput = (ev) => {
@@ -26,44 +34,45 @@
 // }
 
 
-// - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
-//     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
-// Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
-//     Сделайте ваш скрипт как можно более универсальным.
+// // - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
+// //     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
+// // Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
+// //     Сделайте ваш скрипт как можно более универсальным.
+// //
 //
-
-let forma = document.getElementById('form');
-getData(forma);
-
-function  saveForm(t) {
-    setData(t);
-}
-
-function setData(tag) {
-    for (let i = 0; i < tag.length; i++) {
-        const tagElement = tag[i];
-        if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
-            tagElement.checked
-            ? tagElement.value = true
-                : tagElement.value = false
-
-        localStorage.setItem(tagElement.id, tagElement.value);
-    }
-}
-
-function getData(tag) {
-    for (let i = 0; i < localStorage.length; i++) {
-        console.log(i);
-        console.log(localStorage.getItem(tag.children[i].id))
-        if (localStorage.hasOwnProperty(tag.children[i].id)){
-            tag.children[i].value = localStorage.getItem(tag.children[i].id);
-            if (tag.children[i].value === 'true'){
-                tag.children[i].setAttribute('checked', 'checked')
-            }
-        }
-    }
-}
-
+// two.style.display = 'block'
+// let forma = document.getElementById('form');
+// getData(forma);
+//
+// function  saveForm(t) {
+//     setData(t);
+// }
+//
+// function setData(tag) {
+//     for (let i = 0; i < tag.length; i++) {
+//         const tagElement = tag[i];
+//         if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
+//             tagElement.checked
+//             ? tagElement.value = true
+//                 : tagElement.value = false
+//
+//         localStorage.setItem(tagElement.id, tagElement.value);
+//     }
+// }
+//
+// function getData(tag) {
+//     for (let i = 0; i < localStorage.length; i++) {
+//         console.log(i);
+//         console.log(localStorage.getItem(tag.children[i].id))
+//         if (localStorage.hasOwnProperty(tag.children[i].id)){
+//             tag.children[i].value = localStorage.getItem(tag.children[i].id);
+//             if (tag.children[i].value === 'true'){
+//                 tag.children[i].setAttribute('checked', 'checked')
+//             }
+//         }
+//     }
+// }
+//
 
 
 
@@ -73,6 +82,7 @@ function getData(tag) {
 // // Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории
 // // (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
 // //
+// three.style.display = 'block'
 // let left = document.getElementById('left');
 // let right = document.getElementById('right');
 // let data = document.getElementById('NewTextArea');
