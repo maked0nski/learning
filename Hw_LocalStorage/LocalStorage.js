@@ -32,7 +32,6 @@
 //     Сделайте ваш скрипт как можно более универсальным.
 //
 
-// let form = document.forms.myForm;
 let forma = document.getElementById('form');
 getData(forma);
 
@@ -54,7 +53,8 @@ function setData(tag) {
 
 function getData(tag) {
     for (let i = 0; i < localStorage.length; i++) {
-        console.log(tag.children)
+        console.log(i);
+        console.log(localStorage.getItem(tag.children[i].id))
         if (localStorage.hasOwnProperty(tag.children[i].id)){
             tag.children[i].value = localStorage.getItem(tag.children[i].id);
             if (tag.children[i].value === 'true'){
@@ -64,10 +64,51 @@ function getData(tag) {
     }
 }
 
-// -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
-// Требование : хранить историю своих изменений (даже после перезагрузки страницы).
-// Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
+
+
+
+// // -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище),
+// // затем поредактировать их, затем еще поредактировать и возможно еще.....
+// // Требование : хранить историю своих изменений (даже после перезагрузки страницы).
+// // Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории
+// // (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
+// //
+// let left = document.getElementById('left');
+// let right = document.getElementById('right');
+// let data = document.getElementById('NewTextArea');
+// let save = document.getElementById('save');
+// let content_id = localStorage.length;
+// checkLocalStofage ();
 //
+// function checkLocalStofage () {
+//     if (localStorage.length > 0){
+//         data.value = localStorage[content_id];
+//     }
+// }
+// left.onclick = () => {
+//     if (content_id > 1 ){
+//         content_id = content_id - 1;
+//         checkLocalStofage ();
+//     } else {
+//         content_id = localStorage.length;
+//         checkLocalStofage();
+//     }
+// }
+// right.onclick = () => {
+//     if (content_id < localStorage.length ){
+//         content_id = content_id + 1;
+//         checkLocalStofage ();
+//     } else {
+//         content_id = 1;
+//         checkLocalStofage();
+//     }
+// }
+//
+// save.onclick = () => {
+//     localStorage.setItem(localStorage.length+1, data.value);
+//     checkLocalStofage ();
+// }
+
 // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
 //     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
 // Данные вводить через соответсвующую форму.

@@ -9,23 +9,22 @@
 </head>
 <body>
 <div id="content"></div>
-<textarea name='text' id="textarea"></textarea>
+<label for="textarea"></label><textarea name='text' id="textarea"></textarea>
 <fieldset>
     <legend>Заповніть будь-ласка форму</legend>
 
     <form id="form" name="myForm" oninput="saveForm(this)">
-        <input id = 'firstName' name="firstName" type="text" placeholder="Введіть імя">
-        <input id = 'familyName'  name="familyName" type="text" placeholder="Введіть Прізвище">
-        <input id = 'age' name="age"  type="number" placeholder="Введіть Ваш вік">
+        <label for='firstName'>Введіть імя: </label><input id = 'firstName' name="firstName" type="text" placeholder="Введіть імя">
+        <label for='familyName'>Введіть Прізвище: </label><input id = 'familyName' name="familyName" type="text" placeholder="Введіть Прізвище">
+        <label for='age'>Введіть Ваш вік: </label><input id = 'age' name="age" type="number" placeholder="Введіть Ваш вік">
 
             <h4>Сімейний стан</h4>
-            <input id = 'childs' type="checkbox" name="childs" value="false"> Дети есть?<Br>
-            <input id = 'wife' type="radio" name="wife" value="false"> Одружений<Br>
-            <input id = "no_wife" type="radio" name="wife" value="false"> Не Одружений<Br>
+        <label for='childs'> Дети есть? </label><input id = 'childs' type="checkbox" name="childs" value="false"><Br>
+        <label for='wife'> Одружений </label><input id = 'wife' type="radio" name="wife" value="false"><Br>
+        <label for="no_wife"> Не Одружений</label><input id = "no_wife" type="radio" name="wife" value="false"><Br>
 
 
-            <h4>Домашні тварини</h4>
-            <select id="pet" name="pet">
+        <label for="pet_s">Домашні тварини</label><select id="pet_s" name="pet_s">
                 <option>Виберіть зі списка</option>
                 <option>Кіт</option>
                 <option>Собака</option>
@@ -33,12 +32,21 @@
                 <option>Вихухаль</option>
             </select>
 
-            <textarea name="name_pet" id="name_pet" cols="30" rows="10" placeholder="Введіть кличку та опишіть тварину"></textarea>
+        <label for="name_pet_s">Введіть кличку та опишіть тварину</label><textarea name="name_pet_s" id="name_pet_s" cols="30" rows="10" placeholder="Введіть кличку та опишіть тварину"></textarea>
 
 <!--        <button type="submit" name="button">Зберегти</button>-->
     </form>
 </fieldset>
+<div>
+    <button name="left" id="left" type="submit">Left</button>
+    <button name="right" id="right" type="submit">Right</button>
 
+</div>
+<div id="Arrow">
+    <label for="NewTextArea">Введіть текст </label><textarea id="NewTextArea" name="NewTextArea" cols="60" rows="10" placeholder='Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще..... Требование : хранить историю своих изменений (даже после перезагрузки страницы). Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).'></textarea>
+    <br>
+    <button id="save" name="save" type="submit">Save</button>
+</div>
 <script src="LocalStorage.js"></script>
 </body>
 </html>
