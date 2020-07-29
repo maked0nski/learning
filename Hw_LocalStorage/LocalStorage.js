@@ -35,57 +35,57 @@ four.style.display = 'none'
 //     // console.log(ev.target.value);
 // }
 
-
-// - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
-//     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
-// Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
-//     Сделайте ваш скрипт как можно более универсальным.
 //
-
-two.style.display = 'block'
-let forma = document.getElementById('form');
-console.log(forma)
-let forma1 = []
-getData(forma);
-
-function  saveForm(t) {
-    setData(t);
-}
-
-function setData(tag) {
-    for (let i = 0; i < tag.length; i++) {
-        const tagElement = tag[i];
-        if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
-            tagElement.checked
-            ? tagElement.value = true
-                : tagElement.value = false
-        localStorage.setItem(tagElement.id, tagElement.value);
-    }
-}
-
-function getData(tag) {
-    for (key in localStorage)
-    if (localStorage.hasOwnProperty(key)){
-        tag[key].value = localStorage.getItem(key)
-        if (tag[key].value === 'true'){
-            tag[key].setAttribute('checked', 'checked')
-        }
-    }
-    // for (let i = 0; i < tag.length; i++) {
-    //     // console.log('local -  ' + localStorage.key(i));
-    //     // console.log('forma -  ' + tag.children[i].id);
-    //
-    //     console.log(document.getElementById(localStorage.key(i)))
-    //     if (localStorage.hasOwnProperty(tag.children[i].id)){
-    //         document.getElementById(localStorage.key(i))  = localStorage.getItem(tag.children[i].id);
-    //         // tag.children[i].value = localStorage.getItem(tag.children[i].id);
-    //         if (tag.children[i].value === 'true'){
-    //             tag.children[i].setAttribute('checked', 'checked')
-    //         }
-    //     }
-    // }
-}
-
+// // - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
+// //     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
+// // Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
+// //     Сделайте ваш скрипт как можно более универсальным.
+// //
+//
+// two.style.display = 'block'
+// let forma = document.getElementById('form');
+// console.log(forma)
+// let forma1 = []
+// getData(forma);
+//
+// function  saveForm(t) {
+//     setData(t);
+// }
+//
+// function setData(tag) {
+//     for (let i = 0; i < tag.length; i++) {
+//         const tagElement = tag[i];
+//         if (tagElement.type === 'checkbox' || tagElement.type === 'radio')
+//             tagElement.checked
+//             ? tagElement.value = true
+//                 : tagElement.value = false
+//         localStorage.setItem(tagElement.id, tagElement.value);
+//     }
+// }
+//
+// function getData(tag) {
+//     for (key in localStorage)
+//     if (localStorage.hasOwnProperty(key)){
+//         tag[key].value = localStorage.getItem(key)
+//         if (tag[key].value === 'true'){
+//             tag[key].setAttribute('checked', 'checked')
+//         }
+//     }
+//     // for (let i = 0; i < tag.length; i++) {
+//     //     // console.log('local -  ' + localStorage.key(i));
+//     //     // console.log('forma -  ' + tag.children[i].id);
+//     //
+//     //     console.log(document.getElementById(localStorage.key(i)))
+//     //     if (localStorage.hasOwnProperty(tag.children[i].id)){
+//     //         document.getElementById(localStorage.key(i))  = localStorage.getItem(tag.children[i].id);
+//     //         // tag.children[i].value = localStorage.getItem(tag.children[i].id);
+//     //         if (tag.children[i].value === 'true'){
+//     //             tag.children[i].setAttribute('checked', 'checked')
+//     //         }
+//     //     }
+//     // }
+// }
+//
 
 
 
@@ -132,18 +132,18 @@ function getData(tag) {
 //     checkLocalStofage ();
 // }
 
-// // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
-// //     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
-// // Данные вводить через соответсвующую форму.
-// // --Каждому контакту добавить кнопку для удаления контакта.
-// // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
-// //
+// - Реализуйте записную книгу, хранящую данные в локальном хранилище.
+//     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
+// Данные вводить через соответсвующую форму.
+// --Каждому контакту добавить кнопку для удаления контакта.
+// --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
 //
-// four.style.display = 'block';
-// let MyForm = document.forms.MyForms;
-// MyForm.Save.onclick = (ev) =>{
-//     ev.preventDefault();
-//     let {target} = ev.target;
-//     console.log(ev.target);
-//
-// }
+
+four.style.display = 'block';
+let MyForm = document.forms.MyForms;
+MyForm.Save.onclick = (ev) =>{
+    ev.preventDefault();
+    let {target} = ev.target;
+    console.log(ev.target);
+
+}
