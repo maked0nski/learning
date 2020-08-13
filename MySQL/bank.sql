@@ -69,8 +69,9 @@ group by Education;
 
 select FirstName,LastName,Education,Age,max(avg_sum)
 from (select *, AVG(bank.application.Sum) as avg_sum
-      from bank.client join bank.application on client.idClient = application.Client_idClient
-      group by idClient) as `*as`;
+      from bank.client
+          join bank.application on client.idClient = application.Client_idClient
+      group by idClient) selectTable;
 
 select *, AVG(bank.application.Sum) as avg_sum
 from bank.client join bank.application on client.idClient = application.Client_idClient
@@ -79,7 +80,7 @@ order by avg_sum DESC limit 1;
 
 
 select FirstName, LastName, Education, Passport, City, Age, max(average_sum)
-from (select FirstName, LastName, Education, Passport, City, Age, avg(Sum) average_sum
+from (select *, avg(Sum) average_sum
       from client c
                join application a on c.idClient = a.Client_idClient
       group by FirstName, LastName, Education, Passport, City, Age
@@ -98,15 +99,21 @@ select DepartmentCity, SUM(Sum)
 from bank.department
          join bank.client c on department.idDepartment = c.Department_idDepartment
          join bank.application a on c.idClient = a.Client_idClient
-group by DepartmentCity limit 1
+group by DepartmentCity limit 1;
 
 
 # 16. Вивести відділення, яке видало найбільший кредит.
 #
 
+select City ,MAX(Sum)
+from application
+    join client c on c.idClient = application.Client_idClient
+    join department d on c.Department_idDepartment = d.idDepartment
 #
 # 17. Усім клієнтам, які мають вищу освіту, встановити усі їхні кредити у розмірі 6000 грн.
 #
+
+
 # 18. Усіх клієнтів київських відділень пересилити до Києва.
 #
 #
