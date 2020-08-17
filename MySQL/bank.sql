@@ -108,52 +108,117 @@ group by DepartmentCity limit 1;
 select City ,MAX(Sum)
 from application
     join client c on c.idClient = application.Client_idClient
-    join department d on c.Department_idDepartment = d.idDepartment
+    join department d on c.Department_idDepartment = d.idDepartment;
 #
 # 17. Усім клієнтам, які мають вищу освіту, встановити усі їхні кредити у розмірі 6000 грн.
 #
-
+update application
+set Sum = 6000
+where Client_idClient  in (
+    select idClient
+    from client where Education like 'high' );
 
 # 18. Усіх клієнтів київських відділень пересилити до Києва.
 #
+update client
+set City = 'Kyiv'
+where Department_idDepartment in (select idDepartment from department where DepartmentCity = 'Kyiv');
+
 #
 # 19. Видалити усі кредити, які є повернені.
 #
-#
+delete FROM application where CreditState like 'Returned';
+
 #
 # 20. Видалити кредити клієнтів, в яких друга літера прізвища є голосною.
 #
+delete from application
+where Client_idClient
+          in (select idClient from client
+          where LastName like '_a%'  or
+                LastName like '_e%' or
+                LastName like '_i%' or
+                LastName like '_o%' or
+                LastName like '_u%'
+                )
+;
+
 # 21    Знайти львівські відділення, які видали кредитів на загальну суму більше ніж 5000
 #
+select Sum(Sum) as bankSum,
+       DepartmentCity,
+       Department_idDepartment did
+from client c
+    join application a on c.idClient = a.Client_idClient
+    join department d on d.idDepartment = c.Department_idDepartment
+where DepartmentCity = 'Lviv'
+group by did
+having bankSum > 5000
+order by bankSum desc;
+
 
 #
 # 22 Знайти клієнтів, які повністю погасили кредити на суму більше ніж 5000
 #
 #
+select LastName, FirstName, Sum
+from client c
+    join application a on c.idClient = a.Client_idClient
+where CreditState like 'Returned' and
+      Sum > 5000
+group by idClient;
+
+
 #
 #
 
 # 23 /* Знайти максимальний неповернений кредит.*/
+select FirstName, LastName, max(Sum), CreditState
+from application
+    join client c on c.idClient = application.Client_idClient
+where CreditState = 'Not returned';
 
 
 
 
 # 24 /*Знайти клієнта, сума кредиту якого найменша*/
 
+select sum(Sum) sumMin, FirstName, LastName
+from client
+    join application a on client.idClient = a.Client_idClient
+group by idClient
+order by sumMin limit 1;
 
 
 
 # 25 /*Знайти кредити, сума яких більша за середнє значення усіх кредитів*/
 
+select Sum
+from application
+where Sum > (select avg(Sum) from application);
 
 
 # 26 /*Знайти клієнтів, які є з того самого міста, що і клієнт, який взяв найбільшу кількість кредитів*/
 
-
+select FirstName, LastName, client.City
+from client
+    join (SELECT COUNT(Client_idClient) count, Client_idClient, City
+        FROM application a
+        JOIN client c on a.Client_idClient = c.idClient
+        group by Client_idClient
+        order by count desc
+        limit 1
+        ) MaxCredit
+where client.City = MaxCredit.City and idClient != Client_idClient;
 
 # 27 #місто чувака який набрав найбільше кредитів
 
-
+select City, FirstName,LastName, count(Client_idClient) count
+from application a
+    join client c on c.idClient = a.Client_idClient
+GROUP BY Client_idClient
+ORDER BY count DESC
+LIMIT 1;
 
 # set sql_safe_updates = 0;
 # set sql_safe_updates = 1;
