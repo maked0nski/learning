@@ -140,8 +140,7 @@ where Client_idClient
                 LastName like '_i%' or
                 LastName like '_o%' or
                 LastName like '_u%'
-                )
-;
+                );
 
 # 21    Знайти львівські відділення, які видали кредитів на загальну суму більше ніж 5000
 #
