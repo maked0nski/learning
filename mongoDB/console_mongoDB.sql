@@ -22,14 +22,59 @@ db.getCollection('students').find({
     avgScore: { $gt : 4 }
 })
 -- 6) Знайти найкращого учня
-db.getCollection('students').find({}).sort({avgScore:-1}).limit(1)
+db.getCollection('students').find().sort({avgScore:-1}).limit(1)
 
 -- 7) Знайти найгіршого учня
+db.getCollection('students').find().sort({avgScore:1}).limit(1)
 -- 8) Знайти топ 3 учнів
+db.getCollection('students').find().sort({avgScore:-1}).limit(3)
 -- 9) Знайти середній бал по школі
+db.getCollection('students').aggregate([
+   {
+     $group: {
+        '_id':'clearField',
+        'avgPoint':{ $avg: '$avgScore'}
+    }
+   },
+   {
+   $project:{
+   '_id': 0
+   }
+   }
+])
 -- 10) Знайти середній бал дітей які вивчають математику або фізику
+db.getCollection('students').aggregate([
+   {
+      $match: {
+         $or: [{lessons:'mathematics'},{lessons:'physics'}]
+      }
+   },
+   {
+      $group:{
+         '_id': 'mathematics and  physics',
+         'avgPoint': {
+            $avg: '$avgScore'
+         }
+      }
+   }
+])
 -- 11) Знайти середній бал по 2 класі
+db.getCollection('students').aggregate([
+    {
+        $match: {class: 2}
+    },
+    {
+        $group:{
+            '_id':'Second class',
+            'avgPoint': {
+                $avg : '$avgScore'
+            }
+
+        }
+    }
+])
 -- 12) Знайти дітей з не повною сімєю
+
 -- 13) Знайти батьків які не працюють
 -- 14) Не працюючих батьків влаштувати офіціантами
 -- 15) Вигнати дітей, які мають середній бал менше ніж 2.5
