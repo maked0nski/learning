@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c87d2a54-3532-4d10-a050-51a3f93c20d8" name="Default Changelist" comment="image">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/hw_13_EVLoop.Async/exemple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/bank.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/bank.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDB/console_mongoDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/console_mongoDB.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +70,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -100,6 +104,9 @@
       <workItem from="1597176568730" duration="922000" />
       <workItem from="1597255296584" duration="31655000" />
       <workItem from="1597784326551" duration="1377000" />
+      <workItem from="1597786318612" duration="3254000" />
+      <workItem from="1597790268680" duration="508000" />
+      <workItem from="1597790870811" duration="2833000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1595375672422</created>
@@ -360,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597783994511</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="vue">
+      <created>1597786996898</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1597786996898</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,13 +403,18 @@
     <MESSAGE value="hw" />
     <MESSAGE value="sql" />
     <MESSAGE value="MongoDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="MongoDB" />
+    <MESSAGE value="vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="484" y="0" key="#HTML" timestamp="1595968008890">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="0" key="#HTML/0.0.1366.728@0.0.1366.728" timestamp="1595968008890" />
+    <state x="568" y="226" width="648" height="451" key="#Notifications" timestamp="1597790112919">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="568" y="226" width="648" height="451" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1597790112919" />
     <state x="72" y="201" key="#SQL_Dialects" timestamp="1597685969019">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -408,30 +427,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="171" y="34" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1597686062666" />
-    <state x="561" y="104" key="FileChooserDialogImpl" timestamp="1595967280561">
+    <state x="213" y="18" key="DBNavigator.ProjectSettingsDialog" timestamp="1597790747847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="561" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595967280561" />
+    <state x="213" y="18" key="DBNavigator.ProjectSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1597790747847" />
+    <state x="561" y="104" key="FileChooserDialogImpl" timestamp="1597790690436">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="561" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597790690436" />
     <state x="507" y="264" key="Github.CreateGistDialog" timestamp="1597686213158">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="264" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1597686213158" />
-    <state width="1091" height="96" key="GridCell.Tab.0.bottom" timestamp="1597783555719">
+    <state width="1078" height="255" key="GridCell.Tab.0.bottom" timestamp="1597793992979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1091" height="96" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597783555719" />
-    <state width="1091" height="96" key="GridCell.Tab.0.center" timestamp="1597783555718">
+    <state width="1078" height="255" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597793992979" />
+    <state width="1078" height="255" key="GridCell.Tab.0.center" timestamp="1597793992979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1091" height="96" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597783555718" />
-    <state width="1091" height="96" key="GridCell.Tab.0.left" timestamp="1597783555717">
+    <state width="1078" height="255" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597793992979" />
+    <state width="1078" height="255" key="GridCell.Tab.0.left" timestamp="1597793992978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1091" height="96" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597783555717" />
-    <state width="1091" height="96" key="GridCell.Tab.0.right" timestamp="1597783555719">
+    <state width="1078" height="255" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597793992978" />
+    <state width="1078" height="255" key="GridCell.Tab.0.right" timestamp="1597793992979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1091" height="96" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597783555719" />
+    <state width="1078" height="255" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597793992979" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1597357964410">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -448,18 +471,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="82" height="441" key="SqlResolveConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1597258579474" />
-    <state x="530" y="276" key="VCS.ChangelistChooser" timestamp="1597276518025">
+    <state x="530" y="276" key="VCS.ChangelistChooser" timestamp="1597786912335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="530" y="276" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1597276518025" />
-    <state x="569" y="277" key="VCS.EditChangelistDialog" timestamp="1597278165212">
+    <state x="530" y="276" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1597786912335" />
+    <state x="569" y="277" key="VCS.EditChangelistDialog" timestamp="1597786933952">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="569" y="277" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1597278165212" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1597783997033">
+    <state x="569" y="277" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1597786933952" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1597787001636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597783997033" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597787001636" />
     <state x="413" y="168" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1597679972294">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -472,13 +495,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="97" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728@0.0.1366.728" timestamp="1597785536663" />
+    <state x="483" y="264" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597790925964">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="483" y="264" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597790925964" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1595760730384">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595760730384" />
-    <state x="349" y="72" width="672" height="676" key="search.everywhere.popup" timestamp="1596149650899">
+    <state x="349" y="72" width="672" height="676" key="search.everywhere.popup" timestamp="1597792900743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="349" y="72" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596149650899" />
+    <state x="349" y="72" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597792900743" />
   </component>
 </project>

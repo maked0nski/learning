@@ -74,9 +74,32 @@ db.getCollection('students').aggregate([
     }
 ])
 -- 12) Знайти дітей з не повною сімєю
-
+db.getCollection('students').find({
+    'parents.1' : {$exists : false }
+})
 -- 13) Знайти батьків які не працюють
+db.getCollection("students").find({
+    "parents.profession": null
+})
 -- 14) Не працюючих батьків влаштувати офіціантами
+db.getCollection('students').update(
+    {parents:{$elemMatch:{"profession":{$exists: 0}}}},
+    {$set: {'parents.$.profession': "waiter"}},
+    {multi: true}
+)
+
+db.getCollection('students').update(
+    {
+       $and:
+        [ {parents: {$ne: null}}, {"parents.profession": null} ]
+        },
+
+    {
+       $set: {"parents.$.profession": "waiter"}
+        },
+
+    {multi: true}
+)
 -- 15) Вигнати дітей, які мають середній бал менше ніж 2.5
 -- 16) Дітям, батьки яких працюють в освіті ( teacher ) поставити 5
 -- 17) Знайти дітей які вчаться в початковій школі (до 5 класу) і вивчають фізику ( physics )

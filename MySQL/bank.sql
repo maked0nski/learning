@@ -5,6 +5,7 @@ select * from bank.client where FirstName like '______';
 select * from bank.department where DepartmentCity like 'Lviv';
 
 # 3. +Вибрати клієнтів з вищою освітою та посортувати по прізвищу.
+
 select * from bank.client where Education like 'high' order by FirstName;
 
 # 4. +Виконати сортування у зворотньому порядку над таблицею Заявка і вивести 5 останніх елементів.
@@ -30,8 +31,6 @@ select count(bank.client.Department_idDepartment)  from bank.client join bank.de
 
 
 # 10. Знайти кредити, які мають найбільшу суму для кожного клієнта окремо.
-
-
 
 select FirstName, LastName, max(Sum)
 from bank.application join bank.client on application.Client_idClient = client.idClient
